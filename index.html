@@ -88,7 +88,7 @@ button{
 
 <div class="container">
 
-<h1>✨ KHẢO BÀI TỪ VỰNG UNIT 1 ✨</h1>
+<h1>✨ KHẢO BÀI TỪ VỰNG UNIT 1 (LẦN 2) ✨</h1>
 
 <div class="header">
 <input id="username" placeholder="Nhập tên của bạn...">
@@ -130,187 +130,238 @@ function shuffle(arr){
 
 // 📚 DATA
 let originalQuestions = [ 
- {
-    q: "Charles Darwin was a famous ______ who developed the theory of evolution.",
-    a: ["biology", "biologist", "biological", "biologically"],
-    c: 1
-  },
-  {
-    q: 'The word "adopt" in "The company adopted a new policy" is closest in meaning to ______.',
-    a: ["reject", "apply", "remove", "ignore"],
-    c: 1
-  },
-  {
-    q: 'Which word means "nhận nuôi"?',
-    a: ["adopt", "diagnose", "access", "create"],
-    c: 0
-  },
-  {
-    q: "Many young people rely on ______ devices to communicate.",
-    a: ["electric", "electrical", "electronic", "electrifying"],
-    c: 2
-  },
-  {
-    q: "There is an ______ fault in the machine.",
-    a: ["electric", "electrical", "electronic", "electricity"],
-    c: 1
-  },
-  {
-    q: 'The opposite of "accessible" is ______.',
-    a: ["available", "reachable", "convenient", "inaccessible"],
-    c: 3
-  },
-  {
-    q: 'The word "attendance" means ______.',
-    a: ["sự chú ý", "sự tham dự", "người tham dự", "người phục vụ"],
-    c: 1
-  },
-  {
-    q: "More than 500 ______ attended the conference.",
-    a: ["attendance", "attendants", "attendees", "attentions"],
-    c: 2
-  },
-  {
-    q: 'Choose the word closest in meaning to "succeed".',
-    a: ["fail", "manage", "refuse", "avoid"],
-    c: 1
-  },
-  {
-    q: "She finally succeeded ______ getting a scholarship.",
-    a: ["at", "on", "in", "with"],
-    c: 2
-  },
-  {
-    q: "Thomas Edison was a great ______.",
-    a: ["invention", "inventor", "inventive", "invent"],
-    c: 1
-  },
-  {
-    q: 'The word "invention" means ______.',
-    a: ["nhà phát minh", "sự sáng tạo", "phát minh", "khám phá"],
-    c: 2
-  },
-  {
-    q: "The company is developing a new ______.",
-    a: ["produce", "production", "productive", "product"],
-    c: 3
-  },
-  {
-    q: "Which sentence is CORRECT?",
-    a: [
-      "She contributed money with charity.",
-      "She contributed money to charity.",
-      "She contributed money for charity to.",
-      "She contributed money at charity."
-    ],
-    c: 1
-  },
-  {
-    q: 'The word "contribution" is closest in meaning to ______.',
-    a: ["influence", "support", "donation", "benefit"],
-    c: 2
-  },
-  {
-    q: "Doctors quickly ______ the disease.",
-    a: ["adopted", "diagnosed", "related", "visualized"],
-    c: 1
-  },
-  {
-    q: "Early ______ can save many lives.",
-    a: ["diagnose", "diagnostic", "diagnosis", "diagnosing"],
-    c: 2
-  },
-  {
-    q: 'The word "visionary" refers to someone who ______.',
-    a: [
-      "lacks ideas",
-      "has creative ideas about the future",
-      "cannot see clearly",
-      "studies science"
-    ],
-    c: 1
-  },
-  {
-    q: "Einstein is considered a mathematical ______.",
-    a: ["genius", "creator", "inventor", "scientist"],
-    c: 0
-  },
-  {
-    q: "She found an ______ solution to the problem.",
-    a: ["ingenious", "genius", "ingenuity", "inventive"],
-    c: 0
-  },
-  {
-    q: 'The word "creativity" means ______.',
-    a: [
-      "khả năng lãnh đạo",
-      "sự tự tin",
-      "sự sáng tạo",
-      "sự thành công"
-    ],
-    c: 2
-  },
-  {
-    q: "The relationship ______ parents and children is important.",
-    a: ["among", "between", "of", "with"],
-    c: 1
-  },
-  {
-    q: "The essay contained a lot of ______ information.",
-    a: ["related", "relative", "relevant", "irrelevant"],
-    c: 3
-  },
-  {
-    q: 'Choose the Vietnamese meaning of "productive".',
-    a: [
-      "Có năng suất",
-      "Có tính sáng tạo",
-      "Có trách nhiệm",
-      "Có ảnh hưởng"
-    ],
-    c: 0
-  },
-  {
-    q: 'Which word means "hoạt hình"?',
-    a: ["animate", "animator", "animation", "animated"],
-    c: 2
-  },
-  {
-    q: "The stars are clearly ______ tonight.",
-    a: ["visionary", "visible", "visual", "invisible"],
-    c: 1
-  },
-  {
-    q: '"Nhà sáng tạo nội dung" can be translated as ______.',
-    a: [
-      "content creation",
-      "content creator",
-      "creative content",
-      "creator content"
-    ],
-    c: 1
-  },
-  {
-    q: 'The opposite of "successful" is ______.',
-    a: ["successive", "productive", "unsuccessful", "inaccessible"],
-    c: 2
-  },
-  {
-    q: 'Choose the correct meaning of "successive".',
-    a: ["thành công", "liên tiếp", "có năng suất", "kế nhiệm"],
-    c: 1
-  },
-  {
-    q: 'Which sentence uses "access" correctly?',
-    a: [
-      "I can access to the Internet.",
-      "I can access the Internet.",
-      "I can access on the Internet.",
-      "I can access with the Internet."
-    ],
-    c: 1
-  }
+{
+  q: "The government decided to ______ a new environmental policy.",
+  a: ["invent", "adopt", "diagnose", "distribute"],
+  c: 1
+},
+{
+  q: "The couple completed the ______ of a baby girl from Vietnam.",
+  a: ["adoption", "contribution", "succession", "recreation"],
+  c: 0
+},
+{
+  q: "The shelter requires every ______ to promise proper care for the animals.",
+  a: ["adoptee", "adopter", "adoption", "creator"],
+  c: 1
+},
+{
+  q: "The child finally met his ______ parents when he turned eighteen.",
+  a: ["adoptive", "adopted", "biological", "relative"],
+  c: 2
+},
+{
+  q: "The city plans to invest in renewable sources of ______.",
+  a: ["electric", "electronics", "electricity", "electrical"],
+  c: 2
+},
+{
+  q: "The house caught fire because of an ______ fault.",
+  a: ["electric", "electronic", "electrical", "electrifying"],
+  c: 2
+},
+{
+  q: "Teenagers spend too much time using ______ devices.",
+  a: ["electric", "electronic", "electrical", "electrifying"],
+  c: 1
+},
+{
+  q: "The audience gave the singer a standing ovation after her ______ performance.",
+  a: ["electric", "electrifying", "electrical", "productive"],
+  c: 1
+},
+{
+  q: "The ______ repaired all the wiring in our house.",
+  a: ["scientist", "electrician", "producer", "inventor"],
+  c: 1
+},
+{
+  q: "The worker was ______ after touching a live wire.",
+  a: ["electrified", "electrocuted", "animated", "diagnosed"],
+  c: 1
+},
+{
+  q: "Students with poor class ______ may not be allowed to take the exam.",
+  a: ["attention", "attendance", "attendee", "accessibility"],
+  c: 1
+},
+{
+  q: "The nurse was extremely ______ to the needs of the elderly patients.",
+  a: ["successful", "attentive", "visual", "inventive"],
+  c: 1
+},
+{
+  q: "More than 300 ______ participated in the international conference.",
+  a: ["attendants", "attendances", "attendees", "attendings"],
+  c: 2
+},
+{
+  q: "The latest iPhone became a fast ______ within a week.",
+  a: ["sale", "seller", "sales", "selling"],
+  c: 1
+},
+{
+  q: "The company's ______ increased by 40% last year.",
+  a: ["sale", "seller", "sales", "selling"],
+  c: 2
+},
+{
+  q: "Not every ______ agrees with this theory.",
+  a: ["science", "scientist", "scientific", "scientifically"],
+  c: 1
+},
+{
+  q: "The findings were based on a ______ approach.",
+  a: ["science", "scientific", "scientist", "scientifically"],
+  c: 1
+},
+{
+  q: "The website is inaccessible because the government has ______ access to it.",
+  a: ["distributed", "blocked", "succeeded", "visualized"],
+  c: 1
+},
+{
+  q: "Improving the ______ of public services should be a priority.",
+  a: ["accessible", "access", "accessibility", "accessor"],
+  c: 2
+},
+{
+  q: "Despite the bad weather, the climbers ______ in reaching the summit.",
+  a: ["succeeded", "preceded", "distributed", "prescribed"],
+  c: 0
+},
+{
+  q: "The speech ______ the award ceremony.",
+  a: ["succeeded", "preceded", "related", "captured"],
+  c: 1
+},
+{
+  q: "The company held three ______ meetings in one week.",
+  a: ["successive", "respectful", "productive", "visual"],
+  c: 0
+},
+{
+  q: "The president's ______ has already been chosen.",
+  a: ["successor", "succession", "contributor", "inventor"],
+  c: 0
+},
+{
+  q: "The sudden ______ of power created political uncertainty.",
+  a: ["successor", "succession", "success", "contribution"],
+  c: 1
+},
+{
+  q: "Thomas Edison was a brilliant ______.",
+  a: ["invention", "inventor", "inventionist", "producer"],
+  c: 1
+},
+{
+  q: "The engineer came up with an ______ design.",
+  a: ["inventive", "respectful", "accessible", "successive"],
+  c: 0
+},
+{
+  q: "The factory ______ thousands of cars every year.",
+  a: ["contributes", "produces", "diagnoses", "visualizes"],
+  c: 1
+},
+{
+  q: "A pleasant environment can make employees more ______.",
+  a: ["productive", "successive", "visionary", "visible"],
+  c: 0
+},
+{
+  q: "Higher employee satisfaction often leads to greater ______.",
+  a: ["productivity", "production", "produce", "producer"],
+  c: 0
+},
+{
+  q: "She is a regular ______ to an environmental magazine.",
+  a: ["contribution", "contributor", "contributorial", "contributory"],
+  c: 1
+},
+{
+  q: "The movie uses computer ______ to create realistic characters.",
+  a: ["animator", "animation", "animate", "animated"],
+  c: 1
+},
+{
+  q: "Pixar employs hundreds of talented ______.",
+  a: ["animations", "animators", "animation makers", "creators"],
+  c: 1
+},
+{
+  q: "Early ______ can save many lives.",
+  a: ["diagnose", "diagnosis", "diagnostic", "diagnosing"],
+  c: 1
+},
+{
+  q: "Scientists have found a strong ______ between diet and mental health.",
+  a: ["contribution", "relationship", "succession", "accessibility"],
+  c: 1
+},
+{
+  q: "The mountain peak is clearly ______ from the village.",
+  a: ["visionary", "visual", "visible", "invisible"],
+  c: 2
+},
+{
+  q: "The campaign used charts to help people ______ the data.",
+  a: ["access", "visualize", "distribute", "diagnose"],
+  c: 1
+},
+{
+  q: "Steve Jobs was a ______ leader who changed the technology industry.",
+  a: ["visible", "visionary", "visual", "productive"],
+  c: 1
+},
+{
+  q: "The boys showed remarkable ______ by building a boat from recycled materials.",
+  a: ["genius", "ingenuity", "invention", "productivity"],
+  c: 1
+},
+{
+  q: "Content ______ has become a popular career among young people.",
+  a: ["create", "creator", "creation", "creative"],
+  c: 2
+},
+{
+  q: "The community center offers many recreational and ______ activities.",
+  a: ["recreation", "recreate", "creative", "creator"],
+  c: 0
+},
+{
+  q: "The charity plans to ______ food and clothes to poor families.",
+  a: ["contribute", "distribute", "prescribe", "attribute"],
+  c: 1
+},
+{
+  q: "Many scientists ______ global warming to human activities.",
+  a: ["precede", "attribute", "concentrate", "distribute"],
+  c: 1
+},
+{
+  q: "The colorful advertisement quickly ______ my attention.",
+  a: ["prescribed", "captured", "distributed", "succeeded"],
+  c: 1
+},
+{
+  q: "Students should ______ the teacher's instructions instead of checking their phones.",
+  a: ["take notice of", "concentrate on", "attribute to", "precede"],
+  c: 1
+},
+{
+  q: "The doctor ______ some medicine that proved highly ______.",
+  a: [
+    "distributed – respectable",
+    "prescribed – effective",
+    "prescribed – respective",
+    "attributed – respectful"
+  ],
+  c: 1
+}
 ];
+
 
 // 🔀 RANDOM CÂU + ĐÁP ÁN
 let questions = shuffle(originalQuestions.map(q=>{

@@ -2,6 +2,9 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>✨ KHẢO BÀI TỪ VỰNG ✨</title>
 
 <style>
@@ -88,7 +91,7 @@ button{
 
 <div class="container">
 
-<h1>✨ KHẢO BÀI TỪ VỰNG UNIT 1 (LẦN 2) ✨</h1>
+<h1>✨ KHẢO BÀI TỪ VỰNG EXTRA READING ✨</h1>
 
 <div class="header">
 <input id="username" placeholder="Nhập tên của bạn...">
@@ -131,234 +134,204 @@ function shuffle(arr){
 // 📚 DATA
 let originalQuestions = [ 
 {
-  q: "The government decided to ______ a new environmental policy.",
-  a: ["invent", "adopt", "diagnose", "distribute"],
+  q: "Many young people fail to reach their full potential because they become comfortable with ______ instead of continuing to improve.",
+  a: ["perseverance", "mediocrity", "resilience", "conviction"],
   c: 1
 },
 {
-  q: "The couple completed the ______ of a baby girl from Vietnam.",
-  a: ["adoption", "contribution", "succession", "recreation"],
-  c: 0
-},
-{
-  q: "The shelter requires every ______ to promise proper care for the animals.",
-  a: ["adoptee", "adopter", "adoption", "creator"],
-  c: 1
-},
-{
-  q: "The child finally met his ______ parents when he turned eighteen.",
-  a: ["adoptive", "adopted", "biological", "relative"],
+  q: "The hotel offers every guest a ______ breakfast at no additional cost.",
+  a: ["comprehensive", "elaborate", "complimentary", "superficial"],
   c: 2
 },
 {
-  q: "The city plans to invest in renewable sources of ______.",
-  a: ["electric", "electronics", "electricity", "electrical"],
+  q: "The scientist repeated the experiment several times to ensure the results were completely ______.",
+  a: ["prosperous", "precise", "delayed", "harsh"],
+  c: 1
+},
+{
+  q: "His inspiring speech encouraged many students to ______ new challenges instead of avoiding them.",
+  a: ["censor", "embrace", "expire", "distribute"],
+  c: 1
+},
+{
+  q: "Too much ______ has been linked to an increased risk of heart disease.",
+  a: ["refined sugar", "solitude", "saturated fat", "novelty"],
   c: 2
 },
 {
-  q: "The house caught fire because of an ______ fault.",
-  a: ["electric", "electronic", "electrical", "electrifying"],
+  q: "Air and clean drinking water are ______ for human survival.",
+  a: ["exclusive", "indispensable", "complimentary", "elaborate"],
+  c: 1
+},
+{
+  q: "Instead of giving a clear explanation, his answer remained very ______ and failed to address the real issue.",
+  a: ["holistic", "superficial", "prosperous", "dynamic"],
+  c: 1
+},
+{
+  q: "The speaker was able to ______ difficult scientific ideas in language that everyone could understand.",
+  a: ["articulate", "deploy", "designate", "cultivate"],
+  c: 0
+},
+{
+  q: "The invention was considered a remarkable ______ because it introduced a completely new way of producing clean energy.",
+  a: ["gratification", "novelty", "mediocrity", "solitude"],
+  c: 1
+},
+{
+  q: "The university promotes a ______ approach to education by developing students academically, physically, and emotionally.",
+  a: ["comprehensive", "impulsive", "elaborate", "censored"],
+  c: 0
+},
+{
+  q: "Rather than seeking immediate ______, successful people are willing to work hard for long-term rewards.",
+  a: ["discernment", "gratification", "conviction", "resilience"],
+  c: 1
+},
+{
+  q: "Over many years, small daily investments can ______ into a significant amount of wealth.",
+  a: ["account", "accumulate", "deploy", "navigate"],
+  c: 1
+},
+{
+  q: "Many successful athletes believe that talent alone is never enough without ______.",
+  a: ["perseverance", "mediocrity", "solitude", "censorship"],
+  c: 0
+},
+{
+  q: "The detective carefully ______ every piece of evidence before identifying the suspect.",
+  a: ["cultivated", "intensified", "scrutinized", "complimented"],
   c: 2
 },
 {
-  q: "Teenagers spend too much time using ______ devices.",
-  a: ["electric", "electronic", "electrical", "electrifying"],
+  q: "Experience and careful observation help us develop better ______ when making important decisions.",
+  a: ["resilience", "discernment", "novelty", "relationship"],
   c: 1
 },
 {
-  q: "The audience gave the singer a standing ovation after her ______ performance.",
-  a: ["electric", "electrifying", "electrical", "productive"],
+  q: "Parents should encourage children to ______ good reading habits from an early age.",
+  a: ["undertake", "cultivate", "account", "expire"],
   c: 1
 },
 {
-  q: "The ______ repaired all the wiring in our house.",
-  a: ["scientist", "electrician", "producer", "inventor"],
+  q: "Her honesty and willingness to help others ______ from the other applicants.",
+  a: ["accounted for", "set her apart", "paid off", "made up"],
   c: 1
 },
 {
-  q: "The worker was ______ after touching a live wire.",
-  a: ["electrified", "electrocuted", "animated", "diagnosed"],
+  q: "The company plans to ______ a new environmental policy beginning next month.",
+  a: ["implement", "dissect", "criticize", "savor"],
+  c: 0
+},
+{
+  q: "The teacher asked students to ______ the experiment before writing their reports.",
+  a: ["conduct", "expire", "distribute", "compliment"],
+  c: 0
+},
+{
+  q: "The police warned citizens not to ______ fake news ______ reliable information.",
+  a: ["attribute ... to", "mistake ... for", "account ... for", "designate ... as"],
   c: 1
 },
 {
-  q: "Students with poor class ______ may not be allowed to take the exam.",
-  a: ["attention", "attendance", "attendee", "accessibility"],
-  c: 1
-},
-{
-  q: "The nurse was extremely ______ to the needs of the elderly patients.",
-  a: ["successful", "attentive", "visual", "inventive"],
-  c: 1
-},
-{
-  q: "More than 300 ______ participated in the international conference.",
-  a: ["attendants", "attendances", "attendees", "attendings"],
+  q: "The report clearly ______ that early intervention is the most effective way to reduce school dropout rates.",
+  a: ["distributes", "censors", "underscores", "expires"],
   c: 2
 },
 {
-  q: "The latest iPhone became a fast ______ within a week.",
-  a: ["sale", "seller", "sales", "selling"],
+  q: "The documentary explained how social media algorithms can ______ people to spend more time online.",
+  a: ["prompt", "cultivate", "designate", "compliment"],
+  c: 0
+},
+{
+  q: "Although the contract had already ______, both companies agreed to negotiate a new one.",
+  a: ["deployed", "expired", "intensified", "resonated"],
   c: 1
 },
 {
-  q: "The company's ______ increased by 40% last year.",
-  a: ["sale", "seller", "sales", "selling"],
+  q: "The university decided to ______ the application deadline because many students had experienced technical problems.",
+  a: ["distribute", "dissect", "extend", "cultivate"],
   c: 2
 },
 {
-  q: "Not every ______ agrees with this theory.",
-  a: ["science", "scientist", "scientific", "scientifically"],
-  c: 1
-},
-{
-  q: "The findings were based on a ______ approach.",
-  a: ["science", "scientific", "scientist", "scientifically"],
-  c: 1
-},
-{
-  q: "The website is inaccessible because the government has ______ access to it.",
-  a: ["distributed", "blocked", "succeeded", "visualized"],
-  c: 1
-},
-{
-  q: "Improving the ______ of public services should be a priority.",
-  a: ["accessible", "access", "accessibility", "accessor"],
-  c: 2
-},
-{
-  q: "Despite the bad weather, the climbers ______ in reaching the summit.",
-  a: ["succeeded", "preceded", "distributed", "prescribed"],
+  q: "The professor spent an hour ______ the poem so that students could understand every hidden meaning.",
+  a: ["elaborating on", "censoring", "deploying", "complimenting"],
   c: 0
 },
 {
-  q: "The speech ______ the award ceremony.",
-  a: ["succeeded", "preceded", "related", "captured"],
+  q: "The government officially ______ the old theater ______ a national cultural heritage site.",
+  a: ["attributed ... to", "designated ... as", "mistook ... for", "accounted ... for"],
   c: 1
 },
 {
-  q: "The company held three ______ meetings in one week.",
-  a: ["successive", "respectful", "productive", "visual"],
+  q: "The company hopes the new software will ______ the process of approving customer requests.",
+  a: ["accelerate", "scrutinize", "savor", "expire"],
   c: 0
 },
 {
-  q: "The president's ______ has already been chosen.",
-  a: ["successor", "succession", "contributor", "inventor"],
+  q: "There are currently several ______ for experienced engineers at our headquarters.",
+  a: ["means of transport", "job vacancies", "collective efforts", "complimentary breakfasts"],
+  c: 1
+},
+{
+  q: "The old factory has been ______ for more than two years and is now completely empty.",
+  a: ["resonated", "vacated", "articulated", "implemented"],
+  c: 1
+},
+{
+  q: "Public transportation is an affordable ______ reducing traffic congestion in large cities.",
+  a: ["account of", "means of", "gratification of", "relationship with"],
+  c: 1
+},
+{
+  q: "On quiet Sunday mornings, my grandfather enjoys ______ while reading the newspaper.",
+  a: ["carrying out a survey", "savoring a cup of tea", "making up a story", "passing a law"],
+  c: 1
+},
+{
+  q: "Thanks to years of wise economic policies, the country has become increasingly ______.",
+  a: ["superficial", "prosperous", "delayed", "elaborate"],
+  c: 1
+},
+{
+  q: "Scientists continue to study the ______ between sleep quality and memory.",
+  a: ["relationship", "mediocrity", "novelty", "solitude"],
   c: 0
 },
 {
-  q: "The sudden ______ of power created political uncertainty.",
-  a: ["successor", "succession", "success", "contribution"],
+  q: "The rescue team showed great courage by entering the burning building to save the children.",
+  a: ["prosperous", "brave", "impulsive", "superficial"],
   c: 1
 },
 {
-  q: "Thomas Edison was a brilliant ______.",
-  a: ["invention", "inventor", "inventionist", "producer"],
+  q: "Thousands of volunteers ______ money, food, and medicine to families affected by the flood.",
+  a: ["complimented", "contributed", "censored", "designated"],
   c: 1
 },
 {
-  q: "The engineer came up with an ______ design.",
-  a: ["inventive", "respectful", "accessible", "successive"],
+  q: "The charity organized volunteers to ______ food supplies fairly among all affected villages.",
+  a: ["distribute", "account for", "resonate", "cultivate"],
   c: 0
 },
 {
-  q: "The factory ______ thousands of cars every year.",
-  a: ["contributes", "produces", "diagnoses", "visualizes"],
-  c: 1
-},
-{
-  q: "A pleasant environment can make employees more ______.",
-  a: ["productive", "successive", "visionary", "visible"],
+  q: "The artist's latest exhibition deeply ______ with young people because it reflected many of their real-life struggles.",
+  a: ["resonated", "deployed", "expired", "vacated"],
   c: 0
 },
 {
-  q: "Higher employee satisfaction often leads to greater ______.",
-  a: ["productivity", "production", "produce", "producer"],
+  q: "The engineer designed two machines that perfectly ______ each other, making the production process much more efficient.",
+  a: ["complimented", "complemented", "censored", "accelerated"],
+  c: 1
+},
+{
+  q: "The teacher gave Lucy a sincere ______ after she delivered an excellent presentation.",
+  a: ["complement", "compliment", "resilience", "conviction"],
+  c: 1
+},
+{
+  q: "During emergencies, medical teams are quickly ______ to areas where help is most urgently needed.",
+  a: ["deployed", "cultivated", "vacated", "prolonged"],
   c: 0
-},
-{
-  q: "She is a regular ______ to an environmental magazine.",
-  a: ["contribution", "contributor", "contributorial", "contributory"],
-  c: 1
-},
-{
-  q: "The movie uses computer ______ to create realistic characters.",
-  a: ["animator", "animation", "animate", "animated"],
-  c: 1
-},
-{
-  q: "Pixar employs hundreds of talented ______.",
-  a: ["animations", "animators", "animation makers", "creators"],
-  c: 1
-},
-{
-  q: "Early ______ can save many lives.",
-  a: ["diagnose", "diagnosis", "diagnostic", "diagnosing"],
-  c: 1
-},
-{
-  q: "Scientists have found a strong ______ between diet and mental health.",
-  a: ["contribution", "relationship", "succession", "accessibility"],
-  c: 1
-},
-{
-  q: "The mountain peak is clearly ______ from the village.",
-  a: ["visionary", "visual", "visible", "invisible"],
-  c: 2
-},
-{
-  q: "The campaign used charts to help people ______ the data.",
-  a: ["access", "visualize", "distribute", "diagnose"],
-  c: 1
-},
-{
-  q: "Steve Jobs was a ______ leader who changed the technology industry.",
-  a: ["visible", "visionary", "visual", "productive"],
-  c: 1
-},
-{
-  q: "The boys showed remarkable ______ by building a boat from recycled materials.",
-  a: ["genius", "ingenuity", "invention", "productivity"],
-  c: 1
-},
-{
-  q: "Content ______ has become a popular career among young people.",
-  a: ["create", "creator", "creation", "creative"],
-  c: 2
-},
-{
-  q: "The community center offers many recreational and ______ activities.",
-  a: ["recreation", "recreate", "creative", "creator"],
-  c: 0
-},
-{
-  q: "The charity plans to ______ food and clothes to poor families.",
-  a: ["contribute", "distribute", "prescribe", "attribute"],
-  c: 1
-},
-{
-  q: "Many scientists ______ global warming to human activities.",
-  a: ["precede", "attribute", "concentrate", "distribute"],
-  c: 1
-},
-{
-  q: "The colorful advertisement quickly ______ my attention.",
-  a: ["prescribed", "captured", "distributed", "succeeded"],
-  c: 1
-},
-{
-  q: "Students should ______ the teacher's instructions instead of checking their phones.",
-  a: ["take notice of", "concentrate on", "attribute to", "precede"],
-  c: 1
-},
-{
-  q: "The doctor ______ some medicine that proved highly ______.",
-  a: [
-    "distributed – respectable",
-    "prescribed – effective",
-    "prescribed – respective",
-    "attributed – respectful"
-  ],
-  c: 1
 }
 ];
 
@@ -398,7 +371,7 @@ questions.forEach((q,i)=>{
 });
 
 // ⏱ timer
-let time=900;
+let time=1200;
 let timer=setInterval(()=>{
   let m=Math.floor(time/60);
   let s=time%60;
@@ -456,10 +429,55 @@ if(hasEmpty){
   let now = new Date().toLocaleString();
 
   // hiển thị
-  document.getElementById("result").innerHTML =
-    `🎉 ${name} đúng ${score}/${questions.length}<br>
-     ⏰ ${now}<br>
-     ⚠️ TabSwitch: ${tabSwitchCount || 0}`;
+  let wrongRate = wrongList.length / questions.length;
+
+let resultHTML = `
+🎉 <b>${name}</b> đúng <b>${score}/${questions.length}</b><br>
+⏰ ${now}<br>
+⚠️ TabSwitch: ${tabSwitchCount || 0}<br><br>
+`;
+
+if(wrongRate < 0.3){
+
+    resultHTML += `
+    <h3>📚 Đáp án các câu sai</h3>
+    `;
+
+    wrongList.forEach((w,i)=>{
+        resultHTML += `
+        <div style="
+            border:1px solid #ddd;
+            padding:10px;
+            margin-bottom:10px;
+            border-radius:10px;
+            background:#fff8e6;
+        ">
+            <b>Câu ${i+1}</b><br>
+            ${w.question}<br><br>
+
+            ❌ Bạn chọn: <span style="color:red">${w.your}</span><br>
+            ✅ Đáp án: <span style="color:green">${w.correct}</span>
+        </div>
+        `;
+    });
+
+}else{
+
+    resultHTML += `
+    <div style="
+        background:#ffeaea;
+        padding:15px;
+        border-radius:12px;
+        color:#c00000;
+        font-weight:bold;
+    ">
+    ❌ Sai trên 30% mà đòi mấy đáp án của mẹ hả cưng?<br>
+    Học bài kỹ vô bữa sau mẹ khảo lại!
+    </div>
+    `;
+}
+
+document.getElementById("result").innerHTML = resultHTML;
 
   // ⭐ GỬI DATA FULL
   fetch("https://script.google.com/macros/s/AKfycbwKGHpjJy1RxNpGRIHdZtQiPfCrh0OSG24DEzQtRB7Ezlr1aki97aZL0JfQiSwkKmYmrg/exec",{

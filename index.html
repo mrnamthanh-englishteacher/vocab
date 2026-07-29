@@ -91,13 +91,13 @@ button{
 
 <div class="container">
 
-<h1>✨ KHẢO BÀI TỪ VỰNG READING UNIT 2 (PHẦN 1) ✨</h1>
+<h1>✨ KHẢO BÀI TỪ VỰNG READING UNIT 2 (LẦN 2) ✨</h1>
 
 <div class="header">
 <input id="username" placeholder="Nhập tên của bạn...">
 </div>
 
-<div id="timer">⏳ 15:00</div>
+<div id="timer">⏳ 20:00</div>
 
 <div id="quiz"></div>
 
@@ -134,802 +134,502 @@ function shuffle(arr){
 // 📚 DATA
 let originalQuestions = [ 
 {
-  q: "The phrase <b>cultural soft power</b> most nearly means ______.",
+  q: "The government has invested in traditional festivals, museums, and international exhibitions to strengthen the country's ______.",
   a: [
-    "sức mạnh quân sự",
-    "sức mạnh mềm văn hóa",
-    "nguồn lực tài chính",
-    "quyền lực pháp lý"
-  ],
-  c: 1
-},
-{
-  q: "<b>Giá trị hữu hình</b> in English is ______.",
-  a: [
-    "intangible values",
-    "traditional values",
-    "tangible values",
-    "cultural values"
-  ],
-  c: 2
-},
-{
-  q: "The word <b>motherland</b> means ______.",
-  a: [
-    "quê hương, Tổ quốc",
-    "nước ngoài",
-    "vùng biên giới",
-    "khu đô thị"
+    "cultural soft power",
+    "political hierarchy",
+    "economic hostility",
+    "digital legislation"
   ],
   c: 0
 },
 {
-  q: "<b>Công nghiệp hóa</b> in English is ______.",
+  q: "Although the city has become increasingly modern, local residents still preserve their ______ through traditional customs and community festivals.",
   a: [
-    "globalisation",
-    "modernisation",
-    "industrialisation",
-    "urbanisation"
-  ],
-  c: 2
-},
-{
-  q: "The word <b>prestige</b> most nearly means ______.",
-  a: [
-    "sự phản đối",
-    "uy tín",
-    "sự phân phối",
-    "lòng khoan dung"
+    "global orientation",
+    "cultural identity",
+    "audience engagement",
+    "business model"
   ],
   c: 1
 },
 {
-  q: "<b>Quan hệ quốc tế</b> in English is ______.",
+  q: "Historical buildings are considered ______ cultural assets because they can be physically seen and touched.",
   a: [
-    "international relations",
+    "intangible",
+    "endogenous",
+    "tangible",
+    "contemporary"
+  ],
+  c: 2
+},
+{
+  q: "Traditional songs, beliefs, and customs are examples of ______ cultural values passed down from one generation to another.",
+  a: [
+    "political",
+    "visible",
+    "financial",
+    "intangible"
+  ],
+  c: 3
+},
+{
+  q: "Education, creativity, and social unity are important ______ that contribute to a country's long-term development.",
+  a: [
     "internal strengths",
-    "national unity",
-    "social engagement"
+    "public hostilities",
+    "legal barriers",
+    "digital crises"
   ],
   c: 0
 },
 {
-  q: "The phrase <b>internal strengths</b> means ______.",
-  a: [
-    "sức ép bên ngoài",
-    "nguồn vốn quốc tế",
-    "nội lực",
-    "mối quan hệ xã hội"
-  ],
-  c: 2
-},
-{
-  q: "<b>Tinh thần yêu nước</b> in English is ______.",
-  a: [
-    "patriotic spirit",
-    "artistic spirit",
-    "internationalism",
-    "cultural identity"
-  ],
-  c: 0
-},
-{
-  q: "The word <b>tolerance</b> most nearly means ______.",
-  a: [
-    "sự quyết tâm",
-    "lòng biết ơn",
-    "lòng khoan dung",
-    "sự bảo hộ"
-  ],
-  c: 2
-},
-{
-  q: "<b>Hội nhập</b> in English is ______.",
-  a: [
-    "preservation",
-    "integration",
-    "distribution",
-    "innovation"
-  ],
-  c: 1
-},
-{
-  q: "The verb <b>emphasise</b> means ______.",
-  a: [
-    "nhấn mạnh",
-    "bảo vệ",
-    "thành lập",
-    "phân phối"
-  ],
-  c: 0
-},
-{
-  q: "<b>Tăng cường</b> in English is ______.",
-  a: [
-    "spread",
-    "shape",
-    "strengthen",
-    "grant"
-  ],
-  c: 2
-},
-{
-  q: "The verb <b>harness</b> most nearly means ______.",
-  a: [
-    "phá hủy",
-    "khai thác và tận dụng",
-    "từ bỏ",
-    "che giấu"
-  ],
-  c: 1
-},
-{
-  q: "<b>Quảng bá</b> in English is ______.",
-  a: [
-    "promote",
-    "conserve",
-    "encompass",
-    "inform"
-  ],
-  c: 0
-},
-{
-  q: "The word <b>ongoing</b> means ______.",
-  a: [
-    "đã bị hủy bỏ",
-    "sắp kết thúc",
-    "đang diễn ra",
-    "không thể thực hiện"
-  ],
-  c: 2
-},
-{
-  q: "<b>Then chốt</b> in English is ______.",
-  a: [
-    "adaptable",
-    "selective",
-    "crucial",
-    "flexible"
-  ],
-  c: 2
-},
-{
-  q: "The adjective <b>indomitable</b> most nearly means ______.",
-  a: [
-    "bất khuất",
-    "dễ tổn thương",
-    "thiếu linh hoạt",
-    "không có bản sắc"
-  ],
-  c: 0
-},
-{
-  q: "<b>Có chọn lọc</b> in English is ______.",
-  a: [
-    "distinctive",
-    "selective",
-    "unified",
-    "diverse"
-  ],
-  c: 1
-},
-{
-  q: "The phrase <b>culturally distinctive</b> means ______.",
-  a: [
-    "phát triển về kinh tế",
-    "đậm bản sắc văn hóa",
-    "có địa vị pháp lý",
-    "thống nhất về chính trị"
-  ],
-  c: 1
-},
-{
-  q: "<b>Trong mắt người dân quốc tế</b> can be expressed as ______.",
-  a: [
-    "in the cause of international people",
-    "across the international globe",
-    "in the eyes of international people",
-    "aimed at international people"
-  ],
-  c: 2
-},
-{
-  q: "The phrase <b>aimed at</b> most nearly means ______.",
-  a: [
-    "bắt nguồn từ",
-    "nhằm mục đích",
-    "được ưu tiên hơn",
-    "đóng vai trò là"
-  ],
-  c: 1
-},
-{
-  q: "<b>Trên toàn cầu</b> in English is ______.",
-  a: [
-    "across the globe",
-    "in the eyes of",
-    "in the cause of",
-    "every aspect of"
-  ],
-  c: 0
-},
-{
-  q: "The phrase <b>takes precedence over</b> means ______.",
-  a: [
-    "được kết hợp với",
-    "được ưu tiên hơn",
-    "được thành lập bởi",
-    "được định hình lại"
-  ],
-  c: 1
-},
-{
-  q: "<b>Thế giới quan</b> in English is ______.",
+  q: "Hosting a successful international arts festival can enhance a nation's ______ and improve its reputation abroad.",
   a: [
     "guardianship",
-    "personhood",
+    "prestige",
+    "hierarchy",
+    "orientation"
+  ],
+  c: 1
+},
+{
+  q: "Environmental protection should ______ short-term profit when natural resources are at serious risk.",
+  a: [
+    "result from",
+    "be susceptible to",
+    "take precedence over",
+    "be commensurate with"
+  ],
+  c: 2
+},
+{
+  q: "The country promotes international cooperation while encouraging the ______ of foreign cultural values that are suitable for its own society.",
+  a: [
+    "complete rejection",
+    "blind imitation",
+    "political exploitation",
+    "selective absorption"
+  ],
+  c: 3
+},
+{
+  q: "Employees with strong ______ can adjust quickly when their workplace introduces new technology or procedures.",
+  a: [
+    "adaptability",
+    "hostility",
+    "legislation",
+    "manifestation"
+  ],
+  c: 0
+},
+{
+  q: "Despite years of hardship, the community maintained an ______ and continued working toward independence.",
+  a: [
+    "artistic ecosystem",
+    "indomitable spirit",
+    "international orientation",
+    "innovative business model"
+  ],
+  c: 1
+},
+{
+  q: "Many young people volunteer in community projects because of their strong ______ and desire to contribute to the country.",
+  a: [
+    "patriotic spirit",
+    "creative landscape",
+    "international prestige",
+    "global hierarchy"
+  ],
+  c: 0
+},
+{
+  q: "Learning to respect people with different backgrounds helps students develop greater ______.",
+  a: [
+    "resourcefulness",
+    "tolerance",
+    "hostility",
+    "manifestation"
+  ],
+  c: 1
+},
+{
+  q: "Many environmental policies are ______ Indigenous beliefs that emphasize respect for nature.",
+  a: [
+    "derived from",
+    "superior to",
+    "commensurate with",
+    "responsible for"
+  ],
+  c: 0
+},
+{
+  q: "According to many Indigenous cultures, every living thing possesses a spirit because of their ______.",
+  a: [
+    "creative industries",
+    "audience engagement",
     "worldview",
+    "business ecosystem"
+  ],
+  c: 2
+},
+{
+  q: "In many traditional societies, humans are viewed as part of nature rather than standing at the top of a ______.",
+  a: [
+    "consensus",
+    "manifestation",
+    "orientation",
+    "hierarchy"
+  ],
+  c: 3
+},
+{
+  q: "Several local volunteers accepted the ______ of the wildlife sanctuary to ensure endangered species were protected.",
+  a: [
+    "guardianship",
+    "prestige",
+    "hostility",
+    "emergence"
+  ],
+  c: 0
+},
+{
+  q: "The government introduced stricter laws to ______ endangered wildlife from illegal hunting.",
+  a: [
+    "dismiss",
+    "safeguard",
+    "undermine",
+    "exploit"
+  ],
+  c: 1
+},
+{
+  q: "The national park was established to ______ for future generations.",
+  a: [
+    "strengthen prestige",
+    "conserve natural resources",
+    "reach a consensus",
+    "reshape the creative landscape"
+  ],
+  c: 1
+},
+{
+  q: "The sudden rise in public support was a clear ______ of people's concern about environmental protection.",
+  a: [
+    "orientation",
+    "legislation",
+    "manifestation",
     "hierarchy"
   ],
   c: 2
 },
 {
-  q: "The word <b>hierarchy</b> most nearly means ______.",
+  q: "Researchers admire Indigenous communities because of their ______ in finding sustainable ways to live with nature despite limited resources.",
   a: [
-    "hệ thống thứ bậc",
-    "sự đồng thuận",
-    "tư cách pháp nhân",
-    "lòng biết ơn"
+    "international integration",
+    "cultural hostility",
+    "creative industries",
+    "resourcefulness"
   ],
-  c: 0
+  c: 3
 },
 {
-  q: "<b>Lòng biết ơn</b> in English is ______.",
+  q: "The new environmental policy aims to balance economic growth with ______ for future generations.",
   a: [
-    "determination",
-    "gratitude",
-    "resourcefulness",
-    "tolerance"
+    "international prestige",
+    "sustainable development",
+    "creative landscape",
+    "political hierarchy"
   ],
   c: 1
 },
 {
-  q: "The word <b>guardianship</b> means ______.",
+  q: "The city plans to ______ modern architecture with traditional cultural elements in its redevelopment project.",
   a: [
-    "sự phân phối",
-    "sự đổi mới",
-    "sự bảo hộ",
-    "sự hội nhập"
+    "dismiss",
+    "undermine",
+    "harmonize",
+    "exploit"
   ],
   c: 2
 },
 {
-  q: "<b>Tư cách pháp nhân</b> in English is ______.",
+  q: "The discovery of a low-cost cancer treatment marked a major ______ in medical science.",
   a: [
-    "legal status",
-    "personhood",
-    "manifestation",
-    "internationalism"
-  ],
-  c: 1
-},
-{
-  q: "The phrase <b>spirit animal</b> most nearly means ______.",
-  a: [
-    "động vật hoang dã",
-    "linh vật",
-    "tổ tiên",
-    "hệ sinh thái"
-  ],
-  c: 1
-},
-{
-  q: "<b>Sự tháo vát</b> in English is ______.",
-  a: [
-    "productivity",
+    "breakthrough development",
+    "cultural identity",
     "resourcefulness",
-    "determination",
+    "orientation"
+  ],
+  c: 0
+},
+{
+  q: "Schools organize museum visits and traditional music performances to help students ______.",
+  a: [
+    "reshape the creative landscape",
+    "preserve cultural heritage",
+    "reach a consensus",
+    "take precedence over"
+  ],
+  c: 1
+},
+{
+  q: "Volunteer programs encourage greater ______ by giving young people opportunities to improve their local communities.",
+  a: [
+    "social engagement",
+    "digital hostility",
+    "artistic hierarchy",
+    "political manifestation"
+  ],
+  c: 0
+},
+{
+  q: "Museums, galleries, artists, and cultural organizations together form a healthy ______.",
+  a: [
+    "business orientation",
+    "artistic ecosystem",
+    "global hierarchy",
+    "internal strength"
+  ],
+  c: 1
+},
+{
+  q: "The theater introduced interactive performances to improve ______ and attract more young visitors.",
+  a: [
+    "heritage education",
+    "audience engagement",
+    "patriotic spirit",
     "guardianship"
   ],
   c: 1
 },
 {
-  q: "The word <b>homemaker</b> means ______.",
+  q: "The exhibition combines traditional paintings with ______ digital installations to attract younger audiences.",
   a: [
-    "người vun vén gia đình",
-    "người bảo vệ di sản",
-    "người làm luật",
-    "người sáng tạo nghệ thuật"
+    "indomitable",
+    "perilous",
+    "contemporary",
+    "endogenous"
+  ],
+  c: 2
+},
+{
+  q: "The rapid growth of ______ has changed the way people create, share, and experience art online.",
+  a: [
+    "digital culture",
+    "natural hierarchy",
+    "political hostility",
+    "global legislation"
   ],
   c: 0
 },
 {
-  q: "<b>Sự hiện thân</b> in English is ______.",
+  q: "Although the building is highly functional, its poor ______ makes it less attractive to visitors.",
   a: [
-    "innovation",
-    "manifestation",
-    "preservation",
-    "distribution"
+    "resourcefulness",
+    "orientation",
+    "aesthetics",
+    "prestige"
   ],
-  c: 1
+  c: 2
 },
 {
-  q: "The word <b>ecosystem</b> most nearly means ______.",
-  a: [
-    "hệ sinh thái",
-    "động vật hoang dã",
-    "nguồn lực văn hóa",
-    "dân tộc thiểu số"
-  ],
-  c: 0
-},
-{
-  q: "<b>Luật pháp</b> in English is ______.",
+  q: "Governments often introduce new ______ to prevent illegal wildlife trade and protect endangered species.",
   a: [
     "legislation",
-    "institution",
-    "conservation",
-    "consensus"
+    "integration",
+    "orientation",
+    "adaptability"
   ],
   c: 0
 },
 {
-  q: "The verb <b>convey</b> means ______.",
+  q: "After hours of discussion, the committee finally managed to ______ on the best solution to the problem.",
   a: [
-    "thành lập",
-    "truyền tải",
-    "công nhận",
-    "tượng trưng"
+    "reshape the creative landscape",
+    "reach a consensus",
+    "preserve cultural heritage",
+    "take precedence over"
   ],
   c: 1
 },
 {
-  q: "<b>Định hình</b> in English can be expressed as ______.",
-  a: [
-    "shape",
-    "grant",
-    "deserve",
-    "protect"
-  ],
-  c: 0
-},
-{
-  q: "The adjective <b>indigenous</b> most nearly means ______.",
-  a: [
-    "đương đại",
-    "bản địa",
-    "đột phá",
-    "thống nhất"
-  ],
-  c: 1
-},
-{
-  q: "<b>Linh thiêng</b> in English is ______.",
-  a: [
-    "sustainable",
-    "artistic",
-    "sacred",
-    "flexible"
-  ],
-  c: 2
-},
-{
-  q: "The phrase <b>be deserving of</b> means ______.",
-  a: [
-    "xứng đáng được",
-    "bắt nguồn từ",
-    "hướng tới",
-    "góp phần vào"
-  ],
-  c: 0
-},
-{
-  q: "<b>Làm nên lịch sử</b> in English is ______.",
-  a: [
-    "make history",
-    "shape history",
-    "preserve history",
-    "redefine history"
-  ],
-  c: 0
-},
-{
-  q: "The phrase <b>hold special value</b> most nearly means ______.",
-  a: [
-    "có giá trị đặc biệt",
-    "được trưng bày",
-    "được công nhận",
-    "có địa vị pháp lý"
-  ],
-  c: 0
-},
-{
-  q: "<b>Đặc biệt chú trọng đến</b> in English is ______.",
-  a: [
-    "every aspect of",
-    "particular emphasis on",
-    "serve as",
-    "hold immense potential"
-  ],
-  c: 1
-},
-{
-  q: "The phrase <b>digital transformation</b> means ______.",
-  a: [
-    "chuyển đổi năng lượng",
-    "chuyển đổi số",
-    "cải cách giáo dục",
-    "hiện đại hóa nông nghiệp"
-  ],
-  c: 1
-},
-{
-  q: "<b>Bản sắc văn hóa</b> in English is ______.",
-  a: [
-    "cultural resources",
-    "cultural identity",
-    "creative industry",
-    "national heritage"
-  ],
-  c: 1
-},
-{
-  q: "The word <b>delegates</b> most nearly means ______.",
-  a: [
-    "người biểu diễn",
-    "đại biểu",
-    "người sáng lập",
-    "người quản lý"
-  ],
-  c: 1
-},
-{
-  q: "<b>Sự đồng thuận</b> in English is ______.",
-  a: [
-    "consensus",
-    "distribution",
-    "innovation",
-    "gratitude"
-  ],
-  c: 0
-},
-{
-  q: "The phrase <b>sustainable development</b> means ______.",
-  a: [
-    "phát triển kinh tế",
-    "phát triển bền vững",
-    "phát triển công nghiệp",
-    "phát triển giáo dục"
-  ],
-  c: 1
-},
-{
-  q: "<b>Đổi mới</b> in English is ______.",
-  a: [
-    "innovation",
-    "preservation",
-    "productivity",
-    "integration"
-  ],
-  c: 0
-},
-{
-  q: "The phrase <b>cultural resources</b> most nearly means ______.",
-  a: [
-    "nguồn lực văn hóa",
-    "tài nguyên thiên nhiên",
-    "nguồn nhân lực",
-    "di sản vật thể"
-  ],
-  c: 0
-},
-{
-  q: "<b>Công nghiệp văn hóa và sáng tạo</b> in English is ______.",
-  a: [
-    "creative economy",
-    "cultural institutions",
-    "cultural and creative industries",
-    "creative communities"
-  ],
-  c: 2
-},
-{
-  q: "The phrase <b>ethnic minority</b> means ______.",
-  a: [
-    "dân tộc thiểu số",
-    "người nhập cư",
-    "người bản địa",
-    "cộng đồng quốc tế"
-  ],
-  c: 0
-},
-{
-  q: "<b>Di sản</b> in English is ______.",
-  a: [
-    "ecosystem",
-    "heritage",
-    "institution",
-    "ancestor"
-  ],
-  c: 1
-},
-{
-  q: "The phrase <b>social engagement</b> most nearly means ______.",
-  a: [
-    "sự hội nhập quốc tế",
-    "gắn kết xã hội",
-    "quan hệ quốc tế",
-    "đoàn kết dân tộc"
-  ],
-  c: 1
-},
-{
-  q: "<b>Sự tương tác của khán giả</b> in English is ______.",
+  q: "Students are encouraged to participate in museum visits because ______ helps them better appreciate traditional culture.",
   a: [
     "audience engagement",
-    "public relations",
-    "social interaction",
-    "viewer response"
-  ],
-  c: 0
-},
-{
-  q: "The phrase <b>national unity</b> means ______.",
-  a: [
-    "an ninh quốc gia",
-    "đoàn kết dân tộc",
-    "chủ nghĩa quốc tế",
-    "quan hệ quốc tế"
+    "heritage education",
+    "cultural stature",
+    "business orientation"
   ],
   c: 1
 },
 {
-  q: "<b>Hài hòa</b> in English is ______.",
+  q: "The government considers culture an ______ that supports long-term national development.",
   a: [
-    "blend",
-    "harmonize",
-    "reshape",
-    "pursue"
+    "international reputation",
+    "creative landscape",
+    "endogenous resource",
+    "public hierarchy"
   ],
-  c: 1
+  c: 2
 },
 {
-  q: "The verb <b>stem from</b> most nearly means ______.",
+  q: "Innovation has become the main ______ behind the rapid growth of the country's creative economy.",
   a: [
-    "góp phần vào",
-    "bắt nguồn từ",
-    "được ưu tiên hơn",
-    "truyền tải"
-  ],
-  c: 1
-},
-{
-  q: "<b>Góp phần vào</b> in English is ______.",
-  a: [
-    "contribute to",
-    "focus on",
-    "work toward",
-    "serve as"
-  ],
-  c: 0
-},
-{
-  q: "The verb <b>elevate</b> means ______.",
-  a: [
-    "bảo tồn",
-    "nâng cao",
-    "kết hợp",
-    "công nhận"
-  ],
-  c: 1
-},
-{
-  q: "<b>Tái định nghĩa</b> in English is ______.",
-  a: [
-    "reshape",
-    "redefine",
-    "harmonize",
-    "encompass"
-  ],
-  c: 1
-},
-{
-  q: "The verb <b>focus on</b> most nearly means ______.",
-  a: [
-    "tập trung vào",
-    "từ bỏ",
-    "phản đối",
-    "thay thế"
-  ],
-  c: 0
-},
-{
-  q: "<b>Kết hợp</b> (động từ) in English is ______.",
-  a: [
-    "reshape",
-    "blend",
-    "grant",
-    "inform"
-  ],
-  c: 1
-},
-{
-  q: "The verb <b>pursue</b> means ______.",
-  a: [
-    "bảo tồn",
-    "theo đuổi",
-    "công nhận",
-    "lan tỏa"
-  ],
-  c: 1
-},
-{
-  q: "<b>Đương đại</b> in English is ______.",
-  a: [
-    "artistic",
-    "contemporary",
-    "adaptable",
-    "selective"
-  ],
-  c: 1
-},
-{
-  q: "The adjective <b>diverse</b> most nearly means ______.",
-  a: [
-    "thống nhất",
-    "đa dạng",
-    "linh hoạt",
-    "độc đáo"
-  ],
-  c: 1
-},
-{
-  q: "<b>Thống nhất</b> in English is ______.",
-  a: [
-    "sustainable",
-    "unified",
-    "distinctive",
-    "indigenous"
-  ],
-  c: 1
-},
-{
-  q: "The adjective <b>artistic</b> means ______.",
-  a: [
-    "mang tính nghệ thuật",
-    "mang tính học thuật",
-    "mang tính lịch sử",
-    "mang tính thương mại"
-  ],
-  c: 0
-},
-{
-  q: "<b>Đột phá</b> in English is ______.",
-  a: [
-    "breakthrough",
-    "innovation",
     "manifestation",
-    "distribution"
+    "political hostility",
+    "legal framework",
+    "dynamic driving force"
+  ],
+  c: 3
+},
+{
+  q: "The ministry released a detailed ______ to help local authorities implement the new cultural policy.",
+  a: [
+    "guiding framework",
+    "spirit animal",
+    "hostility",
+    "manifestation"
   ],
   c: 0
 },
 {
-  q: "The adjective <b>sustainable</b> most nearly means ______.",
+  q: "Film, fashion, music, publishing, and design are all important parts of the nation's ______.",
   a: [
-    "tạm thời",
-    "bền vững",
-    "có chọn lọc",
-    "đang diễn ra"
+    "creative hierarchy",
+    "cultural industries",
+    "internal strengths",
+    "social barriers"
   ],
   c: 1
 },
 {
-  q: "<b>Độc đáo</b> in English is ______.",
+  q: "The city hopes to build a strong ______ that will support young entrepreneurs and creative businesses.",
   a: [
-    "flexible",
-    "unique",
-    "sacred",
-    "adaptable"
+    "artistic ecosystem",
+    "international orientation",
+    "start-up ecosystem",
+    "political structure"
   ],
-  c: 1
+  c: 2
 },
 {
-  q: "The phrase <b>reach a consensus</b> means ______.",
+  q: "Many companies are developing ______ to remain competitive in today's rapidly changing market.",
   a: [
-    "đạt được sự đồng thuận",
-    "đưa ra quyết định",
-    "thành lập tổ chức",
-    "thực hiện nghiên cứu"
+    "patriotic spirits",
+    "conservation strategies",
+    "cultural identities",
+    "innovative business models"
+  ],
+  c: 3
+},
+{
+  q: "The ______ of historical records allows researchers around the world to access valuable documents online.",
+  a: [
+    "digitisation",
+    "guardianship",
+    "hostility",
+    "orientation"
   ],
   c: 0
 },
 {
-  q: "<b>Hài hòa mối quan hệ giữa A và B</b> in English is ______.",
+  q: "Government funding should be ______ the importance of preserving national cultural heritage.",
   a: [
-    "blend A with B",
-    "harmonize the relationship between A and B",
-    "serve as A and B",
-    "focus on A and B"
+    "derived from",
+    "commensurate with",
+    "susceptible to",
+    "rooted in"
   ],
   c: 1
 },
 {
-  q: "The phrase <b>blended with</b> most nearly means ______.",
+  q: "Hosting international festivals has helped improve the country's ______ and attract more overseas visitors.",
   a: [
-    "được thay thế bởi",
-    "được kết hợp với",
-    "được bảo vệ bởi",
-    "được công nhận bởi"
+    "creative landscape",
+    "political hierarchy",
+    "cultural stature",
+    "business model"
   ],
-  c: 1
+  c: 2
 },
 {
-  q: "<b>Có tiềm năng to lớn</b> in English is ______.",
+  q: "Years of political ______ made it difficult for the two neighboring countries to rebuild trust.",
   a: [
-    "take precedence over",
-    "hold immense potential",
-    "work toward",
-    "make history"
+    "prestige",
+    "integration",
+    "adaptability",
+    "hostility"
   ],
-  c: 1
+  c: 3
 },
 {
-  q: "The phrase <b>be home to</b> means ______.",
+  q: "The company changed the ______ of its training program to place greater emphasis on practical skills.",
   a: [
-    "là nơi sinh sống của",
-    "được thành lập bởi",
-    "được ưu tiên hơn",
-    "là biểu tượng của"
+    "orientation",
+    "resourcefulness",
+    "legislation",
+    "manifestation"
   ],
   c: 0
 },
 {
-  q: "<b>Mọi khía cạnh của</b> in English is ______.",
+  q: "Managers should never ______ employees' concerns because doing so may reduce motivation and trust.",
   a: [
-    "across the globe",
-    "every aspect of",
-    "in the cause of",
-    "in the eyes of"
-  ],
-  c: 1
-},
-{
-  q: "The phrase <b>serve as</b> most nearly means ______.",
-  a: [
-    "đóng vai trò là",
-    "bắt nguồn từ",
-    "góp phần vào",
-    "được ưu tiên hơn"
-  ],
-  c: 0
-},
-{
-  q: "<b>Địa vị pháp lý</b> in English is ______.",
-  a: [
-    "personhood",
-    "legal status",
-    "worldview",
-    "guardianship"
-  ],
-  c: 1
-},
-{
-  q: "The verb <b>recognize</b> means ______.",
-  a: [
-    "công nhận",
-    "thành lập",
-    "định hình",
-    "lan tỏa"
-  ],
-  c: 0
-},
-{
-  q: "<b>Bảo tồn</b> (động từ) in English is ______.",
-  a: [
-    "preserve",
-    "reshape",
     "elevate",
-    "demonstrate"
+    "dismiss",
+    "safeguard",
+    "harmonize"
+  ],
+  c: 1
+},
+{
+  q: "Scientists warned that many coastal communities are becoming ______ rising sea levels caused by climate change.",
+  a: [
+    "commensurate with",
+    "susceptible to",
+    "rooted in",
+    "superior to"
+  ],
+  c: 1
+},
+{
+  q: "Cross-cultural exchange programs can ______ by encouraging people from different backgrounds to understand one another.",
+  a: [
+    "foster national unity",
+    "exploit natural resources",
+    "undermine public trust",
+    "increase hostility"
+  ],
+  c: 0
+},
+{
+  q: "The appearance of several AI-powered learning platforms marked the ______ of a new era in education.",
+  a: [
+    "orientation",
+    "prestige",
+    "emergence",
+    "hierarchy"
+  ],
+  c: 2
+},
+{
+  q: "Effective communication is ______ to the success of any international business partnership.",
+  a: [
+    "benign",
+    "perplexing",
+    "contemporary",
+    "pivotal"
+  ],
+  c: 3
+},
+{
+  q: "Experts believe that renewable energy is ______ fossil fuels because it produces less pollution and is more sustainable.",
+  a: [
+    "superior to",
+    "susceptible to",
+    "derived from",
+    "commensurate with"
   ],
   c: 0
 }
@@ -971,7 +671,7 @@ questions.forEach((q,i)=>{
 });
 
 // ⏱ timer
-let time=1500;
+let time=1200;
 let timer=setInterval(()=>{
   let m=Math.floor(time/60);
   let s=time%60;

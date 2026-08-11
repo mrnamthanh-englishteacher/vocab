@@ -91,13 +91,13 @@ button{
 
 <div class="container">
 
-<h1>✨ KHẢO BÀI TỪ VỰNG READING UNIT 2 (LẦN 2) ✨</h1>
+<h1>✨ KHẢO BÀI TỪ VỰNG TOEIC ✨</h1>
 
 <div class="header">
 <input id="username" placeholder="Nhập tên của bạn...">
 </div>
 
-<div id="timer">⏳ 20:00</div>
+<div id="timer">⏳ 25:00</div>
 
 <div id="quiz"></div>
 
@@ -132,506 +132,555 @@ function shuffle(arr){
 }
 
 // 📚 DATA
-let originalQuestions = [ 
+let originalQuestions = [
 {
-  q: "The government has invested in traditional festivals, museums, and international exhibitions to strengthen the country's ______.",
+  q: "I usually ______ to work at 8 a.m.",
   a: [
-    "cultural soft power",
-    "political hierarchy",
-    "economic hostility",
-    "digital legislation"
+    "go",
+    "come",
+    "walk",
+    "run"
   ],
   c: 0
 },
+
 {
-  q: "Although the city has become increasingly modern, local residents still preserve their ______ through traditional customs and community festivals.",
+  q: "She wants to ______ a new computer for work.",
   a: [
-    "global orientation",
-    "cultural identity",
-    "audience engagement",
-    "business model"
+    "have",
+    "buy",
+    "find",
+    "get"
   ],
   c: 1
 },
+
 {
-  q: "Historical buildings are considered ______ cultural assets because they can be physically seen and touched.",
+  q: "Please ______ your name at the top of the form.",
   a: [
-    "intangible",
-    "endogenous",
-    "tangible",
-    "contemporary"
+    "read",
+    "speak",
+    "write",
+    "show"
   ],
   c: 2
 },
+
 {
-  q: "Traditional songs, beliefs, and customs are examples of ______ cultural values passed down from one generation to another.",
+  q: "We need to ______ a decision before the meeting.",
   a: [
-    "political",
-    "visible",
-    "financial",
-    "intangible"
+    "do",
+    "take",
+    "give",
+    "make"
   ],
   c: 3
 },
+
 {
-  q: "Education, creativity, and social unity are important ______ that contribute to a country's long-term development.",
+  q: "Please ______ a seat while you wait.",
   a: [
-    "internal strengths",
-    "public hostilities",
-    "legal barriers",
-    "digital crises"
+    "take",
+    "get",
+    "have",
+    "find"
   ],
   c: 0
 },
+
 {
-  q: "Hosting a successful international arts festival can enhance a nation's ______ and improve its reputation abroad.",
+  q: "Customers can ______ by credit card at this store.",
   a: [
-    "guardianship",
-    "prestige",
-    "hierarchy",
-    "orientation"
+    "buy",
+    "pay",
+    "give",
+    "receive"
   ],
   c: 1
 },
+
 {
-  q: "Environmental protection should ______ short-term profit when natural resources are at serious risk.",
+  q: "I usually ______ shopping on the weekend.",
   a: [
-    "result from",
-    "be susceptible to",
-    "take precedence over",
-    "be commensurate with"
+    "come",
+    "walk",
+    "go",
+    "drive"
   ],
   c: 2
 },
+
 {
-  q: "The country promotes international cooperation while encouraging the ______ of foreign cultural values that are suitable for its own society.",
+  q: "Please ______ attention to the instructions.",
   a: [
-    "complete rejection",
-    "blind imitation",
-    "political exploitation",
-    "selective absorption"
+    "make",
+    "take",
+    "give",
+    "pay"
   ],
   c: 3
 },
+
 {
-  q: "Employees with strong ______ can adjust quickly when their workplace introduces new technology or procedures.",
+  q: "She needs to ______ ready for work.",
   a: [
-    "adaptability",
-    "hostility",
-    "legislation",
-    "manifestation"
+    "get",
+    "go",
+    "come",
+    "be"
   ],
   c: 0
 },
+
 {
-  q: "Despite years of hardship, the community maintained an ______ and continued working toward independence.",
+  q: "Please ______ the instructions before you start.",
   a: [
-    "artistic ecosystem",
-    "indomitable spirit",
-    "international orientation",
-    "innovative business model"
+    "watch",
+    "read",
+    "hear",
+    "see"
   ],
   c: 1
 },
+
 {
-  q: "Many young people volunteer in community projects because of their strong ______ and desire to contribute to the country.",
+  q: "I need to ______ a reservation for tomorrow evening.",
   a: [
-    "patriotic spirit",
-    "creative landscape",
-    "international prestige",
-    "global hierarchy"
-  ],
-  c: 0
-},
-{
-  q: "Learning to respect people with different backgrounds helps students develop greater ______.",
-  a: [
-    "resourcefulness",
-    "tolerance",
-    "hostility",
-    "manifestation"
-  ],
-  c: 1
-},
-{
-  q: "Many environmental policies are ______ Indigenous beliefs that emphasize respect for nature.",
-  a: [
-    "derived from",
-    "superior to",
-    "commensurate with",
-    "responsible for"
-  ],
-  c: 0
-},
-{
-  q: "According to many Indigenous cultures, every living thing possesses a spirit because of their ______.",
-  a: [
-    "creative industries",
-    "audience engagement",
-    "worldview",
-    "business ecosystem"
+    "take",
+    "do",
+    "make",
+    "have"
   ],
   c: 2
 },
+
 {
-  q: "In many traditional societies, humans are viewed as part of nature rather than standing at the top of a ______.",
+  q: "The waiter asked us to ______ the bill.",
   a: [
-    "consensus",
-    "manifestation",
-    "orientation",
-    "hierarchy"
+    "take",
+    "make",
+    "get",
+    "pay"
   ],
   c: 3
 },
+
 {
-  q: "Several local volunteers accepted the ______ of the wildlife sanctuary to ensure endangered species were protected.",
+  q: "I usually ______ an email from my manager every morning.",
   a: [
-    "guardianship",
-    "prestige",
-    "hostility",
-    "emergence"
+    "receive",
+    "send",
+    "write",
+    "read"
   ],
   c: 0
 },
+
 {
-  q: "The government introduced stricter laws to ______ endangered wildlife from illegal hunting.",
+  q: "Please ______ the phone when it rings.",
   a: [
-    "dismiss",
-    "safeguard",
-    "undermine",
-    "exploit"
+    "call",
+    "answer",
+    "listen",
+    "talk"
   ],
   c: 1
 },
+
 {
-  q: "The national park was established to ______ for future generations.",
+  q: "I will ______ a customer after lunch.",
   a: [
-    "strengthen prestige",
-    "conserve natural resources",
-    "reach a consensus",
-    "reshape the creative landscape"
-  ],
-  c: 1
-},
-{
-  q: "The sudden rise in public support was a clear ______ of people's concern about environmental protection.",
-  a: [
-    "orientation",
-    "legislation",
-    "manifestation",
-    "hierarchy"
+    "take",
+    "ask",
+    "call",
+    "tell"
   ],
   c: 2
 },
+
 {
-  q: "Researchers admire Indigenous communities because of their ______ in finding sustainable ways to live with nature despite limited resources.",
+  q: "Could you ______ this package to the shipping department?",
   a: [
-    "international integration",
-    "cultural hostility",
-    "creative industries",
-    "resourcefulness"
+    "give",
+    "receive",
+    "show",
+    "carry"
   ],
   c: 3
 },
+
 {
-  q: "The new environmental policy aims to balance economic growth with ______ for future generations.",
+  q: "Students should ______ English every day.",
   a: [
-    "international prestige",
-    "sustainable development",
-    "creative landscape",
-    "political hierarchy"
-  ],
-  c: 1
-},
-{
-  q: "The city plans to ______ modern architecture with traditional cultural elements in its redevelopment project.",
-  a: [
-    "dismiss",
-    "undermine",
-    "harmonize",
-    "exploit"
-  ],
-  c: 2
-},
-{
-  q: "The discovery of a low-cost cancer treatment marked a major ______ in medical science.",
-  a: [
-    "breakthrough development",
-    "cultural identity",
-    "resourcefulness",
-    "orientation"
+    "practice",
+    "learn",
+    "study",
+    "speak"
   ],
   c: 0
 },
+
 {
-  q: "Schools organize museum visits and traditional music performances to help students ______.",
+  q: "We will ______ work at 8 a.m. tomorrow.",
   a: [
-    "reshape the creative landscape",
-    "preserve cultural heritage",
-    "reach a consensus",
-    "take precedence over"
+    "finish",
+    "start",
+    "leave",
+    "arrive"
   ],
   c: 1
 },
+
 {
-  q: "Volunteer programs encourage greater ______ by giving young people opportunities to improve their local communities.",
+  q: "Please ______ the report before you leave the office.",
   a: [
-    "social engagement",
-    "digital hostility",
-    "artistic hierarchy",
-    "political manifestation"
-  ],
-  c: 0
-},
-{
-  q: "Museums, galleries, artists, and cultural organizations together form a healthy ______.",
-  a: [
-    "business orientation",
-    "artistic ecosystem",
-    "global hierarchy",
-    "internal strength"
-  ],
-  c: 1
-},
-{
-  q: "The theater introduced interactive performances to improve ______ and attract more young visitors.",
-  a: [
-    "heritage education",
-    "audience engagement",
-    "patriotic spirit",
-    "guardianship"
-  ],
-  c: 1
-},
-{
-  q: "The exhibition combines traditional paintings with ______ digital installations to attract younger audiences.",
-  a: [
-    "indomitable",
-    "perilous",
-    "contemporary",
-    "endogenous"
+    "start",
+    "read",
+    "finish",
+    "write"
   ],
   c: 2
 },
+
 {
-  q: "The rapid growth of ______ has changed the way people create, share, and experience art online.",
+  q: "Please ______ a message if I am not in the office.",
   a: [
-    "digital culture",
-    "natural hierarchy",
-    "political hostility",
-    "global legislation"
-  ],
-  c: 0
-},
-{
-  q: "Although the building is highly functional, its poor ______ makes it less attractive to visitors.",
-  a: [
-    "resourcefulness",
-    "orientation",
-    "aesthetics",
-    "prestige"
-  ],
-  c: 2
-},
-{
-  q: "Governments often introduce new ______ to prevent illegal wildlife trade and protect endangered species.",
-  a: [
-    "legislation",
-    "integration",
-    "orientation",
-    "adaptability"
-  ],
-  c: 0
-},
-{
-  q: "After hours of discussion, the committee finally managed to ______ on the best solution to the problem.",
-  a: [
-    "reshape the creative landscape",
-    "reach a consensus",
-    "preserve cultural heritage",
-    "take precedence over"
-  ],
-  c: 1
-},
-{
-  q: "Students are encouraged to participate in museum visits because ______ helps them better appreciate traditional culture.",
-  a: [
-    "audience engagement",
-    "heritage education",
-    "cultural stature",
-    "business orientation"
-  ],
-  c: 1
-},
-{
-  q: "The government considers culture an ______ that supports long-term national development.",
-  a: [
-    "international reputation",
-    "creative landscape",
-    "endogenous resource",
-    "public hierarchy"
-  ],
-  c: 2
-},
-{
-  q: "Innovation has become the main ______ behind the rapid growth of the country's creative economy.",
-  a: [
-    "manifestation",
-    "political hostility",
-    "legal framework",
-    "dynamic driving force"
+    "send",
+    "write",
+    "receive",
+    "leave"
   ],
   c: 3
 },
+
 {
-  q: "The ministry released a detailed ______ to help local authorities implement the new cultural policy.",
+  q: "The flight will ______ at the airport at 9 p.m.",
   a: [
-    "guiding framework",
-    "spirit animal",
-    "hostility",
-    "manifestation"
+    "arrive",
+    "leave",
+    "start",
+    "finish"
   ],
   c: 0
 },
+
 {
-  q: "Film, fashion, music, publishing, and design are all important parts of the nation's ______.",
+  q: "Employees must ______ a uniform at this company.",
   a: [
-    "creative hierarchy",
-    "cultural industries",
-    "internal strengths",
-    "social barriers"
+    "carry",
+    "wear",
+    "wash",
+    "bring"
   ],
   c: 1
 },
+
 {
-  q: "The city hopes to build a strong ______ that will support young entrepreneurs and creative businesses.",
+  q: "My father usually ______ to work instead of walking.",
   a: [
-    "artistic ecosystem",
-    "international orientation",
-    "start-up ecosystem",
-    "political structure"
+    "runs",
+    "comes",
+    "drives",
+    "stays"
   ],
   c: 2
 },
+
 {
-  q: "Many companies are developing ______ to remain competitive in today's rapidly changing market.",
+  q: "We are going to ______ a client this afternoon.",
   a: [
-    "patriotic spirits",
-    "conservation strategies",
-    "cultural identities",
-    "innovative business models"
+    "call",
+    "visit",
+    "see",
+    "meet"
   ],
   c: 3
 },
+
 {
-  q: "The ______ of historical records allows researchers around the world to access valuable documents online.",
+  q: "Please ______ notes during the meeting.",
   a: [
-    "digitisation",
-    "guardianship",
-    "hostility",
-    "orientation"
+    "take",
+    "write",
+    "read",
+    "show"
   ],
   c: 0
 },
+
 {
-  q: "Government funding should be ______ the importance of preserving national cultural heritage.",
+  q: "You can ______ cash or pay by credit card.",
   a: [
-    "derived from",
-    "commensurate with",
-    "susceptible to",
-    "rooted in"
+    "get",
+    "pay",
+    "make",
+    "take"
   ],
   c: 1
 },
+
 {
-  q: "Hosting international festivals has helped improve the country's ______ and attract more overseas visitors.",
+  q: "I ______ a mistake in the report yesterday.",
   a: [
-    "creative landscape",
-    "political hierarchy",
-    "cultural stature",
-    "business model"
+    "finished",
+    "had",
+    "made",
+    "did"
   ],
   c: 2
 },
+
 {
-  q: "Years of political ______ made it difficult for the two neighboring countries to rebuild trust.",
+  q: "Let's ______ a break after we finish this work.",
   a: [
-    "prestige",
-    "integration",
-    "adaptability",
-    "hostility"
+    "make",
+    "get",
+    "have",
+    "take"
   ],
   c: 3
 },
+
 {
-  q: "The company changed the ______ of its training program to place greater emphasis on practical skills.",
+  q: "He works hard because he wants to ______ money.",
   a: [
-    "orientation",
-    "resourcefulness",
-    "legislation",
-    "manifestation"
+    "make",
+    "pay",
+    "buy",
+    "give"
   ],
   c: 0
 },
+
 {
-  q: "Managers should never ______ employees' concerns because doing so may reduce motivation and trust.",
+  q: "She hopes to ______ a job after she finishes school.",
   a: [
-    "elevate",
-    "dismiss",
-    "safeguard",
-    "harmonize"
+    "look",
+    "get",
+    "work",
+    "have"
   ],
   c: 1
 },
+
 {
-  q: "Scientists warned that many coastal communities are becoming ______ rising sea levels caused by climate change.",
+  q: "Many customers ______ online before visiting the store.",
   a: [
-    "commensurate with",
-    "susceptible to",
-    "rooted in",
-    "superior to"
-  ],
-  c: 1
-},
-{
-  q: "Cross-cultural exchange programs can ______ by encouraging people from different backgrounds to understand one another.",
-  a: [
-    "foster national unity",
-    "exploit natural resources",
-    "undermine public trust",
-    "increase hostility"
-  ],
-  c: 0
-},
-{
-  q: "The appearance of several AI-powered learning platforms marked the ______ of a new era in education.",
-  a: [
-    "orientation",
-    "prestige",
-    "emergence",
-    "hierarchy"
+ "come",
+    "walk",
+    "go",
+    "drive"
   ],
   c: 2
 },
+
 {
-  q: "Effective communication is ______ to the success of any international business partnership.",
+  q: "Mr. Brown is busy. Please ______ back this afternoon.",
   a: [
-    "benign",
-    "perplexing",
-    "contemporary",
-    "pivotal"
+    "answer",
+    "talk",
+    "ask",
+    "call"
   ],
   c: 3
 },
+
 {
-  q: "Experts believe that renewable energy is ______ fossil fuels because it produces less pollution and is more sustainable.",
+  q: "Please ______ a document to the manager by email.",
   a: [
-    "superior to",
-    "susceptible to",
-    "derived from",
-    "commensurate with"
+    "send",
+    "receive",
+    "bring",
+    "carry"
   ],
   c: 0
+},
+
+{
+  q: "The company ______ an order from a new customer yesterday.",
+  a: [
+    "sent",
+    "received",
+    "paid",
+    "bought"
+  ],
+  c: 1
+},
+
+{
+  q: "I need to ______ a phone call before the meeting.",
+  a: [
+    "answer",
+    "take",
+    "make",
+    "receive"
+  ],
+  c: 2
+},
+
+{
+  q: "Please ______ an email to the customer about the order.",
+  a: [
+    "read",
+    "answer",
+    "receive",
+    "write"
+  ],
+  c: 3
+},
+
+{
+  q: "Can you ______ me where the conference room is?",
+  a: [
+    "tell",
+    "show",
+    "ask",
+    "answer"
+  ],
+  c: 0
+},
+
+{
+  q: "Please ______ to the instructions carefully.",
+  a: [
+    "hear",
+    "listen",
+    "talk",
+    "speak"
+  ],
+  c: 1
+},
+
+{
+  q: "We can ______ the manager talking in his office.",
+  a: [
+    "see",
+    "watch",
+    "hear",
+    "look"
+  ],
+  c: 2
+},
+
+{
+  q: "The teacher will ______ us how to answer the question.",
+  a: [
+    "tell",
+    "teach",
+    "ask",
+    "show"
+  ],
+  c: 3
+},
+
+{
+  q: "After work, I usually ______ home and cook dinner.",
+  a: [
+    "go",
+    "come",
+    "get",
+    "leave"
+  ],
+  c: 0
+},
+
+{
+  q: "I ______ wake up early on weekdays. I want to wake up late",
+  a: [
+    "never",
+    "usually",
+    "sometimes",
+    "always"
+  ],
+  c: 0
+},
+
+{
+  q: "I work from Monday to Friday, but I rest on the ______.",
+  a: [
+    "weekday",
+    "week",
+    "weekend",
+    "month"
+  ],
+  c: 2
+},
+
+{
+  q: "We will start a new project ______ Monday.",
+  a: [
+    "this",
+    "every",
+    "tomorrow",
+    "last"
+  ],
+  c: 0
+},
+
+{
+  q: "She practices speaking English ______ morning.",
+  a: [
+    "every",
+    "this",
+    "next",
+    "yesterday"
+  ],
+  c: 0
+},
+
+{
+  q: "We will finish the report ______ afternoon.",
+  a: [
+    "every",
+    "this",
+    "next",
+    "tomorrow"
+  ],
+  c: 1
+},
+
+{
+  q: "The new employee will start work ______.",
+  a: [
+    "today",
+    "yesterday",
+    "tomorrow",
+    "morning"
+  ],
+  c: 2
+},
+
+{
+  q: "He arrived ______, so the meeting had already started.",
+  a: [
+    "early",
+    "safely",
+    "on time",
+    "late"
+  ],
+  c: 3
+},
+
+{
+  q: "Which group contains only time expressions?",
+  a: [
+    "morning – afternoon – evening – night",
+    "clean – wash – cook – eat",
+    "hour – drink – sleep – minute",
+    "year – visit – stay – month"
+  ],
+  c: 0
+},
+
+{
+  q: "Which group contains only common daily activities?",
+  a: [
+    "year – month – week – hour",
+    "wake up – get dressed – eat – drink",
+    "early – late – always – never",
+    "today – tomorrow – yesterday – evening"
+  ],
+  c: 1
 }
 ];
 
@@ -671,7 +720,7 @@ questions.forEach((q,i)=>{
 });
 
 // ⏱ timer
-let time=1200;
+let time=1500;
 let timer=setInterval(()=>{
   let m=Math.floor(time/60);
   let s=time%60;

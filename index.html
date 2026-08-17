@@ -91,13 +91,13 @@ button{
 
 <div class="container">
 
-<h1>✨ KHẢO BÀI TỪ VỰNG TOEIC ✨</h1>
+<h1>✨ KHẢO BÀI TỪ VỰNG READING UNIT 3 ✨</h1>
 
 <div class="header">
 <input id="username" placeholder="Nhập tên của bạn...">
 </div>
 
-<div id="timer">⏳ 25:00</div>
+<div id="timer">⏳ 20:00</div>
 
 <div id="quiz"></div>
 
@@ -106,8 +106,7 @@ button{
 <div id="result"></div>
 
 <h3>🏆 Bảng xếp hạng</h3>
-<div id="leaderboard"></div>
-
+<div id="leaderboard"></divầy 
 </div>
 
 <script>
@@ -134,554 +133,405 @@ function shuffle(arr){
 // 📚 DATA
 let originalQuestions = [
 {
-  q: "I usually ______ to work at 8 a.m.",
-  a: [
-    "go",
-    "come",
-    "walk",
-    "run"
-  ],
-  c: 0
-},
-
-{
-  q: "She wants to ______ a new computer for work.",
-  a: [
-    "have",
-    "buy",
-    "find",
-    "get"
-  ],
-  c: 1
-},
-
-{
-  q: "Please ______ your name at the top of the form.",
-  a: [
-    "read",
-    "speak",
-    "write",
-    "show"
-  ],
-  c: 2
-},
-
-{
-  q: "We need to ______ a decision before the meeting.",
-  a: [
-    "do",
-    "take",
-    "give",
-    "make"
-  ],
-  c: 3
-},
-
-{
-  q: "Please ______ a seat while you wait.",
-  a: [
-    "take",
-    "get",
-    "have",
-    "find"
-  ],
-  c: 0
-},
-
-{
-  q: "Customers can ______ by credit card at this store.",
-  a: [
-    "buy",
-    "pay",
-    "give",
-    "receive"
-  ],
-  c: 1
-},
-
-{
-  q: "I usually ______ shopping on the weekend.",
-  a: [
-    "come",
-    "walk",
-    "go",
-    "drive"
-  ],
-  c: 2
-},
-
-{
-  q: "Please ______ attention to the instructions.",
-  a: [
-    "make",
-    "take",
-    "give",
-    "pay"
-  ],
-  c: 3
-},
-
-{
-  q: "She needs to ______ ready for work.",
-  a: [
-    "get",
-    "go",
-    "come",
-    "be"
-  ],
-  c: 0
-},
-
-{
-  q: "Please ______ the instructions before you start.",
-  a: [
-    "watch",
-    "read",
-    "hear",
-    "see"
-  ],
-  c: 1
-},
-
-{
-  q: "I need to ______ a reservation for tomorrow evening.",
-  a: [
-    "take",
-    "do",
-    "make",
-    "have"
-  ],
-  c: 2
-},
-
-{
-  q: "The waiter asked us to ______ the bill.",
-  a: [
-    "take",
-    "make",
-    "get",
-    "pay"
-  ],
-  c: 3
-},
-
-{
-  q: "I usually ______ an email from my manager every morning.",
-  a: [
-    "receive",
-    "send",
-    "write",
-    "read"
-  ],
-  c: 0
-},
-
-{
-  q: "Please ______ the phone when it rings.",
-  a: [
-    "call",
-    "answer",
-    "listen",
-    "talk"
-  ],
-  c: 1
-},
-
-{
-  q: "I will ______ a customer after lunch.",
-  a: [
-    "take",
-    "ask",
-    "call",
-    "tell"
-  ],
-  c: 2
-},
-
-{
-  q: "Could you ______ this package to the shipping department?",
-  a: [
-    "give",
-    "receive",
-    "show",
-    "carry"
-  ],
-  c: 3
-},
-
-{
-  q: "Students should ______ English every day.",
-  a: [
-    "practice",
-    "learn",
-    "study",
-    "speak"
-  ],
-  c: 0
-},
-
-{
-  q: "We will ______ work at 8 a.m. tomorrow.",
-  a: [
-    "finish",
-    "start",
-    "leave",
-    "arrive"
-  ],
-  c: 1
-},
-
-{
-  q: "Please ______ the report before you leave the office.",
-  a: [
-    "start",
-    "read",
-    "finish",
-    "write"
-  ],
-  c: 2
-},
-
-{
-  q: "Please ______ a message if I am not in the office.",
-  a: [
-    "send",
-    "write",
-    "receive",
-    "leave"
-  ],
-  c: 3
-},
-
-{
-  q: "The flight will ______ at the airport at 9 p.m.",
-  a: [
-    "arrive",
-    "leave",
-    "start",
-    "finish"
-  ],
-  c: 0
-},
-
-{
-  q: "Employees must ______ a uniform at this company.",
-  a: [
-    "carry",
-    "wear",
-    "wash",
-    "bring"
-  ],
-  c: 1
-},
-
-{
-  q: "My father usually ______ to work instead of walking.",
-  a: [
-    "runs",
-    "comes",
-    "drives",
-    "stays"
-  ],
-  c: 2
-},
-
-{
-  q: "We are going to ______ a client this afternoon.",
-  a: [
-    "call",
-    "visit",
-    "see",
-    "meet"
-  ],
-  c: 3
-},
-
-{
-  q: "Please ______ notes during the meeting.",
-  a: [
-    "take",
-    "write",
-    "read",
-    "show"
-  ],
-  c: 0
-},
-
-{
-  q: "You can ______ cash or pay by credit card.",
-  a: [
-    "get",
-    "pay",
-    "make",
-    "take"
-  ],
-  c: 1
-},
-
-{
-  q: "I ______ a mistake in the report yesterday.",
-  a: [
-    "finished",
-    "had",
-    "made",
-    "did"
-  ],
-  c: 2
-},
-
-{
-  q: "Let's ______ a break after we finish this work.",
-  a: [
-    "make",
-    "get",
-    "have",
-    "take"
-  ],
-  c: 3
-},
-
-{
-  q: "He works hard because he wants to ______ money.",
-  a: [
-    "make",
-    "pay",
-    "buy",
-    "give"
-  ],
-  c: 0
-},
-
-{
-  q: "She hopes to ______ a job after she finishes school.",
-  a: [
-    "look",
-    "get",
-    "work",
-    "have"
-  ],
-  c: 1
-},
-
-{
-  q: "Many customers ______ online before visiting the store.",
-  a: [
- "come",
-    "walk",
-    "go",
-    "drive"
-  ],
-  c: 2
-},
-
-{
-  q: "Mr. Brown is busy. Please ______ back this afternoon.",
-  a: [
-    "answer",
-    "talk",
-    "ask",
-    "call"
-  ],
-  c: 3
-},
-
-{
-  q: "Please ______ a document to the manager by email.",
-  a: [
-    "send",
-    "receive",
-    "bring",
-    "carry"
-  ],
-  c: 0
-},
-
-{
-  q: "The company ______ an order from a new customer yesterday.",
-  a: [
-    "sent",
-    "received",
-    "paid",
-    "bought"
-  ],
-  c: 1
-},
-
-{
-  q: "I need to ______ a phone call before the meeting.",
-  a: [
-    "answer",
-    "take",
-    "make",
-    "receive"
-  ],
-  c: 2
-},
-
-{
-  q: "Please ______ an email to the customer about the order.",
-  a: [
-    "read",
-    "answer",
-    "receive",
-    "write"
-  ],
-  c: 3
-},
-
-{
-  q: "Can you ______ me where the conference room is?",
-  a: [
-    "tell",
-    "show",
-    "ask",
-    "answer"
-  ],
-  c: 0
-},
-
-{
-  q: "Please ______ to the instructions carefully.",
-  a: [
-    "hear",
-    "listen",
-    "talk",
-    "speak"
-  ],
-  c: 1
-},
-
-{
-  q: "We can ______ the manager talking in his office.",
-  a: [
-    "see",
-    "watch",
-    "hear",
-    "look"
-  ],
-  c: 2
-},
-
-{
-  q: "The teacher will ______ us how to answer the question.",
-  a: [
-    "tell",
-    "teach",
-    "ask",
-    "show"
-  ],
-  c: 3
-},
-
-{
-  q: "After work, I usually ______ home and cook dinner.",
-  a: [
-    "go",
-    "come",
-    "get",
-    "leave"
-  ],
-  c: 0
-},
-
-{
-  q: "I ______ wake up early on weekdays. I want to wake up late",
-  a: [
-    "never",
-    "usually",
-    "sometimes",
-    "always"
-  ],
-  c: 0
-},
-
-{
-  q: "I work from Monday to Friday, but I rest on the ______.",
-  a: [
-    "weekday",
-    "week",
-    "weekend",
-    "month"
-  ],
-  c: 2
-},
-
-{
-  q: "We will start a new project ______ Monday.",
-  a: [
-    "this",
-    "every",
-    "tomorrow",
-    "last"
-  ],
-  c: 0
-},
-
-{
-  q: "She practices speaking English ______ morning.",
-  a: [
-    "every",
-    "this",
-    "next",
-    "yesterday"
-  ],
-  c: 0
-},
-
-{
-  q: "We will finish the report ______ afternoon.",
-  a: [
-    "every",
-    "this",
-    "next",
-    "tomorrow"
-  ],
-  c: 1
-},
-
-{
-  q: "The new employee will start work ______.",
-  a: [
-    "today",
-    "yesterday",
-    "tomorrow",
-    "morning"
-  ],
-  c: 2
-},
-
-{
-  q: "He arrived ______, so the meeting had already started.",
-  a: [
-    "early",
-    "safely",
-    "on time",
-    "late"
-  ],
-  c: 3
-},
-
-{
-  q: "Which group contains only time expressions?",
-  a: [
-    "morning – afternoon – evening – night",
-    "clean – wash – cook – eat",
-    "hour – drink – sleep – minute",
-    "year – visit – stay – month"
-  ],
-  c: 0
-},
-
-{
-  q: "Which group contains only common daily activities?",
-  a: [
-    "year – month – week – hour",
-    "wake up – get dressed – eat – drink",
-    "early – late – always – never",
-    "today – tomorrow – yesterday – evening"
-  ],
-  c: 1
-}
+    q: "Rapid urban expansion may ______ the destruction of natural habitats if development is poorly controlled.",
+    a: [
+      "bring about",
+      "stem from",
+      "account for",
+      "rely on"
+    ],
+    c: 0
+  },
+  {
+    q: "Air pollution can have a ______ impact on the health of people living in densely populated cities.",
+    a: [
+      "temporary",
+      "superficial",
+      "profound",
+      "reluctant"
+    ],
+    c: 2
+  },
+  {
+    q: "Many environmental problems ______ rapid industrialization and excessive consumption of natural resources.",
+    a: [
+      "contribute to",
+      "stem from",
+      "result in",
+      "engage with"
+    ],
+    c: 1
+  },
+  {
+    q: "The closure of several factories could ______ serious economic difficulties for the surrounding communities.",
+    a: [
+      "take root",
+      "call for",
+      "coexist with",
+      "result in"
+    ],
+    c: 3
+  },
+  {
+    q: "The expansion of urban areas often comes at the ______ of agricultural land and natural habitats.",
+    a: [
+      "expense",
+      "prospect",
+      "resilience",
+      "commitment"
+    ],
+    c: 0
+  },
+  {
+    q: "New housing developments are beginning to ______ nearby forests and farmland as the city continues to expand outward.",
+    a: [
+      "alleviate",
+      "acknowledge",
+      "encroach upon",
+      "integrate into"
+    ],
+    c: 2
+  },
+  {
+    q: "Plastic pollution can seriously ______ marine ecosystems by interfering with food chains and natural habitats.",
+    a: [
+      "foster",
+      "disrupt",
+      "restore",
+      "mitigate"
+    ],
+    c: 1
+  },
+  {
+    q: "Scientists are concerned that widespread habitat destruction will lead to a significant decline in ______.",
+    a: [
+      "infrastructure",
+      "prosperity",
+      "mobility",
+      "biodiversity"
+    ],
+    c: 3
+  },
+  {
+    q: "The arrival of several large international retailers has ______ local family-owned businesses, many of which have been forced to close.",
+    a: [
+      "dealt a blow to",
+      "taken root in",
+      "kept pace with",
+      "made way for"
+    ],
+    c: 0
+  },
+  {
+    q: "Agriculture continues to form the ______ of the economy in many rural regions, providing jobs and income for most local residents.",
+    a: [
+      "outcome",
+      "backbone",
+      "trade-off",
+      "hardship"
+    ],
+    c: 1
+  },
+  {
+    q: "Many small businesses are struggling to ______ large online retailers that can offer customers much lower prices.",
+    a: [
+      "expose",
+      "accommodate",
+      "compete with",
+      "advocate"
+    ],
+    c: 2
+  },
+  {
+    q: "The latest climate report strongly ______ the urgent need for immediate action to reduce greenhouse gas emissions.",
+    a: [
+      "conceals",
+      "dismisses",
+      "contradicts",
+      "underscores"
+    ],
+    c: 3
+  },
+  {
+    q: "Policymakers often face a difficult ______ between rapid economic growth and environmental protection, as improving one may come at a cost to the other.",
+    a: [
+      "trade-off",
+      "displacement",
+      "vulnerability",
+      "engagement"
+    ],
+    c: 0
+  },
+  {
+    q: "Heavy dependence on fossil fuels continues to ______ global climate change by releasing enormous quantities of greenhouse gases.",
+    a: [
+      "stem from",
+      "contribute to",
+      "interfere with",
+      "result from"
+    ],
+    c: 1
+  },
+  {
+    q: "Rising housing prices have resulted in the ______ of many low-income residents from city centres.",
+    a: [
+      "integration",
+      "intervention",
+      "displacement",
+      "implementation"
+    ],
+    c: 2
+  },
+  {
+    q: "Without effective policies, rapid population growth may ______ existing social inequalities, making them even more severe.",
+    a: [
+      "alleviate",
+      "eradicate",
+      "conceal",
+      "exacerbate"
+    ],
+    c: 3
+  },
+  {
+    q: "Urban wetlands can help ______ the effects of flooding by absorbing and temporarily storing excess rainwater.",
+    a: [
+      "mitigate",
+      "intensify",
+      "trigger",
+      "deteriorate"
+    ],
+    c: 0
+  },
+  {
+    q: "Untreated industrial waste may ______ a serious threat to both human health and aquatic ecosystems.",
+    a: [
+      "undertake",
+      "pose",
+      "foster",
+      "diminish"
+    ],
+    c: 1
+  },
+  {
+    q: "Environmental groups ______ adopting stricter regulations to protect endangered wildlife and their habitats.",
+    a: [
+      "overlook",
+      "fluctuate",
+      "advocate",
+      "displace"
+    ],
+    c: 2
+  },
+  {
+    q: "The needs of disadvantaged communities are sometimes ______ in major development projects, receiving little attention from planners.",
+    a: [
+      "sustained",
+      "augmented",
+      "restored",
+      "overlooked"
+    ],
+    c: 3
+  },
+  {
+    q: "Workers in the gig economy may face ______ employment, with unstable income and limited job security.",
+    a: [
+      "precarious",
+      "prominent",
+      "sustainable",
+      "conventional"
+    ],
+    c: 0
+  },
+  {
+    q: "In communities where meaningful social interaction is disappearing, a serious problem of social isolation may gradually ______.",
+    a: [
+      "fall apart",
+      "take root",
+      "turn down",
+      "give away"
+    ],
+    c: 1
+  },
+  {
+    q: "Excessive reliance on digital communication may unintentionally ______ feelings of social isolation among people who rarely interact face to face.",
+    a: [
+      "alleviate",
+      "restore",
+      "engender",
+      "eradicate"
+    ],
+    c: 2
+  },
+  {
+    q: "Constant exposure to online entertainment may ______ the amount of time teenagers spend interacting face to face with family and friends.",
+    a: [
+      "maximize",
+      "augment",
+      "sustain",
+      "diminish"
+    ],
+    c: 3
+  },
+  {
+    q: "Even when surrounded by thousands of people, some urban residents find that meaningful social connections remain ______ and difficult to establish.",
+    a: [
+      "elusive",
+      "inevitable",
+      "abundant",
+      "accessible"
+    ],
+    c: 0
+  },
+  {
+    q: "Some companies ______ short-term profits over environmental responsibility, focusing on immediate financial gains rather than sustainability.",
+    a: [
+      "equate",
+      "prioritize",
+      "expose",
+      "assimilate"
+    ],
+    c: 1
+  },
+  {
+    q: "The gradual ______ of community ties can increase feelings of loneliness as residents become less connected to one another.",
+    a: [
+      "prosperity",
+      "intervention",
+      "erosion",
+      "resilience"
+    ],
+    c: 2
+  },
+  {
+    q: "Governments increasingly ______ that loneliness is not merely a personal issue but also a serious public health concern.",
+    a: [
+      "conceal",
+      "overlook",
+      "dispute",
+      "acknowledge"
+    ],
+    c: 3
+  },
+  {
+    q: "Some studies ______ prolonged social isolation with other serious threats to human health because their long-term consequences may be comparable.",
+    a: [
+      "equate",
+      "distinguish",
+      "replace",
+      "prevent"
+    ],
+    c: 0
+  },
+  {
+    q: "Long-term exposure to severe air pollution may increase the risk of ______ mortality, causing some people to die earlier than expected.",
+    a: [
+      "sustainable",
+      "premature",
+      "renewable",
+      "adaptable"
+    ],
+    c: 1
+  },
+  {
+    q: "Addressing climate change effectively will ______ close cooperation among governments, businesses, and individuals.",
+    a: [
+      "result from",
+      "interfere with",
+      "call for",
+      "account for"
+    ],
+    c: 2
+  },
+  {
+    q: "Well-designed public spaces can ______ stronger social connections by encouraging residents to meet and interact naturally.",
+    a: [
+      "deteriorate",
+      "displace",
+      "eradicate",
+      "foster"
+    ],
+    c: 3
+  },
+  {
+    q: "Digital technology is now so deeply integrated into modern society that it has become ______ linked to almost every aspect of daily life.",
+    a: [
+      "inextricably",
+      "accidentally",
+      "temporarily",
+      "superficially"
+    ],
+    c: 0
+  },
+  {
+    q: "Electricity prices may ______ throughout the year, rising or falling depending on supply, demand, and fuel costs.",
+    a: [
+      "stabilize",
+      "fluctuate",
+      "eradicate",
+      "integrate"
+    ],
+    c: 1
+  },
+  {
+    q: "Without early treatment, a minor health condition may gradually ______ and become much more difficult to manage.",
+    a: [
+      "alleviate",
+      "recover",
+      "deteriorate",
+      "flourish"
+    ],
+    c: 2
+  },
+  {
+    q: "Whether the online course succeeds is largely ______ students' access to reliable technology; without such access, its effectiveness is significantly reduced.",
+    a: [
+      "confronted with",
+      "engaged with",
+      "separated from",
+      "contingent upon"
+    ],
+    c: 3
+  },
+  {
+    q: "Expanding affordable public transportation could help ______ traffic congestion by reducing the number of private vehicles on the road.",
+    a: [
+      "alleviate",
+      "intensify",
+      "trigger",
+      "undermine"
+    ],
+    c: 0
+  },
+  {
+    q: "Children living in unstable housing may experience greater ______ to poverty and social exclusion because they lack a secure foundation.",
+    a: [
+      "prosperity",
+      "vulnerability",
+      "sustainability",
+      "accessibility"
+    ],
+    c: 1
+  },
+  {
+    q: "Financial ______ can prevent low-income families from obtaining secure and adequate housing.",
+    a: [
+      "engagement",
+      "resilience",
+      "hardship",
+      "prosperity"
+    ],
+    c: 2
+  },
+  {
+    q: "Education, stable housing, and community support can help vulnerable young people build ______ and recover from difficult life experiences.",
+    a: [
+      "displacement",
+      "vulnerability",
+      "instability",
+      "resilience"
+    ],
+    c: 3
+  }
 ];
 
 
@@ -720,7 +570,7 @@ questions.forEach((q,i)=>{
 });
 
 // ⏱ timer
-let time=1500;
+let time=1200;
 let timer=setInterval(()=>{
   let m=Math.floor(time/60);
   let s=time%60;

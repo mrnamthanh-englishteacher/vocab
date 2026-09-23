@@ -84,6 +84,18 @@ button{
 #leaderboard{
   margin-top:10px;
 }
+
+.quiz-locked{
+  opacity:0.55;
+  pointer-events:none;
+}
+
+#nameHint{
+  text-align:center;
+  color:#c00000;
+  font-weight:bold;
+  margin-top:8px;
+}
 </style>
 </head>
 
@@ -91,10 +103,11 @@ button{
 
 <div class="container">
 
-<h1>✨ KHẢO BÀI TỪ VỰNG READING UNIT 3 ✨</h1>
+<h1>✨ KHẢO BÀI TỪ VỰNG UNIT 1 ✨</h1>
 
 <div class="header">
 <input id="username" placeholder="Nhập tên của bạn...">
+<div id="nameHint">⚠️ Phải nhập tên trước khi làm bài.</div>
 </div>
 
 <div id="timer">⏳ 20:00</div>
@@ -110,7 +123,9 @@ button{
 </div>
 
 <script>
-let tabSwitchCount = 0; 
+let tabSwitchCount = 0;
+let submitted = false;
+let timeExpired = false; 
 
 document.addEventListener("visibilitychange", function() {
   if (document.hidden) {
@@ -132,204 +147,204 @@ function shuffle(arr){
 
 // 📚 DATA
 let originalQuestions = [
-{
-    q: "Rising global fuel prices have _______ countries that rely heavily on imported oil and gas.",
-    a: ["gained traction in", "placed pressure on", "complied with", "accounted for"],
+  {
+    q: "Although the enemy army was much larger, the local people continued to _______ their attacks for several months.",
+    a: ["retreat", "resist", "diagnose", "inspire"],
     c: 1
   },
   {
-    q: "By expanding domestic renewable energy production, the country hopes to reduce its _______ imported fossil fuels.",
-    a: ["opposition to", "compliance with", "responsibility for", "dependence on"],
-    c: 3
-  },
-  {
-    q: "Solar and wind power now _______ nearly 35% of the country's total electricity generation.",
-    a: ["account for", "comply with", "stem from", "distinguish from"],
+    q: "Thousands of ordinary people joined the _______ movement to fight against the occupying forces.",
+    a: ["resistance", "presentation", "innovation", "recreation"],
     c: 0
   },
   {
-    q: "The government plans to _______ the new waste-management policy nationwide after a successful trial in three major cities.",
-    a: ["fragment", "discard", "implement", "suspend"],
+    q: "After several hours of fighting, the soldiers finally managed to _______ the enemy and take control of the area.",
+    a: ["dedicate", "operate", "defeat", "characterize"],
     c: 2
   },
   {
-    q: "Diversifying fuel suppliers can help _______ the economic impact of sudden changes in global energy prices.",
-    a: ["deploy", "violate", "mitigate", "distinguish"],
-    c: 2
-  },
-  {
-    q: "Developing domestic energy sources can increase national _______ by reducing the need for foreign supplies.",
-    a: ["self-reliance", "vulnerability", "exposure", "opposition"],
-    c: 0
-  },
-  {
-    q: "A reliable supply of affordable fuel is essential to a country's energy _______.",
-    a: ["stewardship", "feasibility", "consumption", "security"],
-    c: 3
-  },
-  {
-    q: "Oil prices have become extremely _______, making it difficult for businesses to predict their transportation costs.",
-    a: ["habitable", "volatile", "viable", "rigorous"],
+    q: "The two armies fought a fierce _______ that lasted from early morning until sunset.",
+    a: ["mission", "battle", "treatment", "legacy"],
     c: 1
   },
   {
-    q: "After inspectors discovered a serious safety violation, the factory was ordered to _______ until the problem was resolved.",
-    a: ["suspend operations", "gain traction", "foster biodiversity", "accelerate implementation"],
+    q: "Many wounded soldiers were carried away from the _______ and taken to a nearby field hospital.",
+    a: ["battlefield", "documentary", "surgery", "biography"],
     c: 0
   },
   {
-    q: "The nationwide _______ of the new recycling programme will begin in January after several successful local trials.",
-    a: ["framework", "overhaul", "rollout", "resort"],
-    c: 2
-  },
-  {
-    q: "All factories must operate _______ national environmental standards or they may face legal penalties.",
-    a: ["at the source of", "in principle with", "in place with", "in compliance with"],
-    c: 3
-  },
-  {
-    q: "The government has decided to _______ additional inspection teams to regions where illegal waste disposal is most common.",
-    a: ["abate", "deploy", "decompose", "offset"],
+    q: "The resistance fighters often hid deep in the _______, where enemy forces found it difficult to locate them.",
+    a: ["operation", "jungle", "presentation", "character"],
     c: 1
   },
   {
-    q: "A circular economy reduces the need to extract _______ by keeping existing products and materials in use for longer.",
-    a: ["synthetic materials", "equivalent amounts", "virgin resources", "core operations"],
+    q: "The _______ ordered his troops to move to a safer position after receiving reports of an approaching enemy force.",
+    a: ["entrepreneur", "surgeon", "commander", "poet"],
     c: 2
   },
   {
-    q: "The idea initially attracted little public attention, but it began to _______ after several major companies announced their support.",
-    a: ["come at a cost", "stop short", "suspend operations", "gain traction"],
-    c: 3
+    q: "After years of military service and several major battles, he is now respected as a war _______.",
+    a: ["veteran", "founder", "genius", "character"],
+    c: 0
   },
   {
-    q: "Many businesses _______ the idea of sustainable production but struggle to put it into practice because of high initial costs.",
-    a: ["comply", "embrace", "fragment", "abate"],
+    q: "The young _______ was seriously wounded while protecting his unit during the battle.",
+    a: ["soldier", "entrepreneur", "surgeon", "poet"],
+    c: 0
+  },
+  {
+    q: "When it became impossible to defend the position, the commander had no choice but to order a _______.",
+    a: ["victory", "mission", "retreat", "resistance"],
+    c: 2
+  },
+  {
+    q: "Because of his important contribution to the country's independence, he later became known as a national _______.",
+    a: ["hero", "enemy", "founder", "surgeon"],
+    c: 0
+  },
+  {
+    q: "The soldiers were remembered for their _______ actions in protecting civilians despite the danger to their own lives.",
+    a: ["viral", "heroic", "biological", "poetic"],
     c: 1
   },
   {
-    q: "Many governments support the circular economy _______, but turning that support into concrete policies remains difficult.",
-    a: ["in principle", "at the source", "on a national scale", "as a final resort"],
-    c: 0
-  },
-  {
-    q: "The proposal introduces several minor reforms but _______ requiring manufacturers to completely redesign their products.",
-    a: ["accounts for", "complies with", "is rooted in", "stops short of"],
-    c: 3
-  },
-  {
-    q: "Moving from a throwaway economy to a circular one requires a _______ in the way goods are designed, produced, and reused.",
-    a: ["promising initiative", "legal requirement", "fundamental change", "final resort"],
-    c: 2
-  },
-  {
-    q: "Before investing billions of dollars in the project, experts must determine its technical and economic _______.",
-    a: ["feasibility", "vulnerability", "stewardship", "resilience"],
-    c: 0
-  },
-  {
-    q: "The city's outdated waste-collection system needs a complete _______ rather than a few minor adjustments.",
-    a: ["rollout", "overhaul", "offset", "exposure"],
+    q: "The commander successfully led his army to _______ after several months of difficult fighting.",
+    a: ["injury", "victory", "retreat", "disease"],
     c: 1
   },
   {
-    q: "Some manufacturers are _______ replace conventional packaging because environmentally friendly alternatives remain more expensive.",
-    a: ["reluctant to", "rooted in", "driven by", "in place to"],
-    c: 0
-  },
-  {
-    q: "Installing pollution-control equipment is a _______; factories that fail to do so may lose their operating licences.",
-    a: ["promising initiative", "collective effort", "massive investment", "legal requirement"],
-    c: 3
-  },
-  {
-    q: "Tackling climate change requires _______ from governments, businesses, communities, and individuals rather than action by a single group.",
-    a: ["robust regulation", "genuine responsibility", "collective effort", "external fluctuations"],
+    q: "The rescue team was sent on a dangerous _______ to bring the wounded soldiers back from enemy territory.",
+    a: ["achievement", "vision", "mission", "recreation"],
     c: 2
   },
   {
-    q: "The community recycling project is a _______ that could eventually be expanded to other regions if it proves successful.",
-    a: ["legal obligation", "promising initiative", "fundamental change", "final resort"],
+    q: "Her lifelong _______ to helping injured soldiers made her widely respected by both doctors and patients.",
+    a: ["devotion", "resistance", "operation", "animation"],
+    c: 0
+  },
+  {
+    q: "Even under extremely difficult conditions, she remained _______ to providing medical care for everyone who needed it.",
+    a: ["dedicated", "viral", "wounded", "computer-animated"],
+    c: 0
+  },
+  {
+    q: "He decided to _______ his entire life to scientific research and the improvement of public health.",
+    a: ["diagnose", "dedicate", "retreat", "characterize"],
     c: 1
   },
   {
-    q: "The new environmental law cannot be properly enforced until an effective monitoring system is _______.",
-    a: ["in principle", "at the source", "in place", "at a cost"],
-    c: 2
-  },
-  {
-    q: "Companies that fail to _______ strict environmental standards may be fined or ordered to suspend operations.",
-    a: ["comply with", "gain traction", "account for", "distinguish from"],
+    q: "Her strong _______ to achieve her goal helped her overcome many difficulties and complete the project successfully.",
+    a: ["determination", "battlefield", "defeat", "treatment"],
     c: 0
   },
   {
-    q: "The proposed ban faced strong _______ from manufacturers who argued that replacing their equipment would be too expensive.",
-    a: ["stewardship", "resilience", "feasibility", "opposition"],
-    c: 3
+    q: "She was _______ to complete the mission successfully, even though the conditions were extremely challenging.",
+    a: ["determined", "poetic", "biological", "wounded"],
+    c: 0
   },
   {
-    q: "A recycling policy that succeeds in one city could have a far greater impact if adopted _______.",
-    a: ["at the source", "on a national scale", "in principle", "as a final resort"],
+    q: "The community showed remarkable _______ by rebuilding homes and schools soon after the war ended.",
+    a: ["resilience", "surgery", "biography", "presentation"],
+    c: 0
+  },
+  {
+    q: "It took great courage and _______ for the team to continue the project after many unsuccessful attempts.",
+    a: ["perseverance", "animation", "injury", "battlefield"],
+    c: 0
+  },
+  {
+    q: "The firefighter showed extraordinary _______ when he entered the burning building to rescue two children.",
+    a: ["courage", "poetry", "disease", "treatment"],
+    c: 0
+  },
+  {
+    q: "People throughout the country admired the soldier's _______ in facing danger to protect others.",
+    a: ["bravery", "recreation", "operation", "presentation"],
+    c: 0
+  },
+  {
+    q: "His willingness to sacrifice his personal interests for his country reflected a deep sense of _______.",
+    a: ["patriotism", "innovation", "surgery", "animation"],
+    c: 0
+  },
+  {
+    q: "Her strong _______ to the humanitarian cause continued for more than thirty years.",
+    a: ["commitment", "defeat", "injury", "battlefield"],
+    c: 0
+  },
+  {
+    q: "The leader had a clear _______ of a country in which all children would have access to education.",
+    a: ["vision", "retreat", "enemy", "treatment"],
+    c: 0
+  },
+  {
+    q: "Steve Jobs is often described as a _______ entrepreneur because he imagined products and technologies before they became common.",
+    a: ["wounded", "visionary", "viral", "poetic"],
     c: 1
   },
   {
-    q: "Purchasing carbon credits may _______ an equivalent amount of emissions elsewhere, but it does not remove pollution from a company's own operations.",
-    a: ["eliminate", "fragment", "offset", "deploy"],
-    c: 2
-  },
-  {
-    q: "Heavy industries such as steel and cement are particularly difficult to _______ because their core operations generate large amounts of carbon dioxide.",
-    a: ["decompose", "discard", "overhaul", "decarbonize"],
-    c: 3
-  },
-  {
-    q: "The scientific case for achieving Net Zero is _______ decades of research on the effects of greenhouse gases on the climate.",
-    a: ["rooted in", "exposed to", "reluctant to", "distinguished from"],
+    q: "During the war, the doctor spent several years working in a _______ close to the battlefield.",
+    a: ["field hospital", "resistance movement", "live-action film", "personal account"],
     c: 0
   },
   {
-    q: "Failure to limit global warming could have _______ consequences for ecosystems, agriculture, and coastal communities.",
-    a: ["unprecedented", "catastrophic", "persistent", "idealistic"],
+    q: "The _______ performed several difficult operations on wounded soldiers during the night.",
+    a: ["founder", "fighter", "surgeon", "commander"],
+    c: 2
+  },
+  {
+    q: "Because the soldier had a serious abdominal injury, doctors had to perform emergency _______ immediately.",
+    a: ["surgery", "poetry", "animation", "resistance"],
+    c: 0
+  },
+  {
+    q: "The doctor had to _______ on the wounded soldier for nearly four hours to remove the bullet safely.",
+    a: ["innovate", "operate", "resist", "inspire"],
     c: 1
   },
   {
-    q: "It is important to _______ carbon neutrality from Net Zero because the two approaches impose different requirements on organizations.",
-    a: ["offset", "align", "distinguish", "alleviate"],
+    q: "Nurses worked day and night to _______ the injured after the battle.",
+    a: ["transform", "characterize", "treat", "dedicate"],
     c: 2
   },
   {
-    q: "Instead of relying primarily on carbon credits, companies should cut emissions _______ by changing how goods are produced throughout their value chains.",
-    a: ["as a final resort", "on a national scale", "in principle", "at the source"],
-    c: 3
-  },
-  {
-    q: "Under a rigorous Net Zero strategy, carbon offsets should be treated as a _______ for emissions that cannot yet be eliminated.",
-    a: ["final resort", "cornerstone", "legal requirement", "promising initiative"],
+    q: "The patient received medical _______ for several weeks before he was well enough to leave the hospital.",
+    a: ["treatment", "commitment", "achievement", "innovation"],
     c: 0
   },
   {
-    q: "Effective environmental policy requires _______ regulation with clear standards and strict enforcement rather than lax rules that companies can easily avoid.",
-    a: ["persistent", "robust", "idealistic", "synthetic"],
+    q: "After several medical tests, he was _______ with pancreatic cancer.",
+    a: ["presented", "defeated", "diagnosed", "inspired"],
+    c: 2
+  },
+  {
+    q: "The company developed a highly _______ method that reduced production time by almost half.",
+    a: ["innovative", "heroic", "wounded", "viral"],
+    c: 0
+  },
+  {
+    q: "The laboratory uses _______ technology that is more advanced than most systems currently available.",
+    a: ["national", "cutting-edge", "poetic", "wounded"],
     c: 1
   },
   {
-    q: "Cheap disposable products can encourage _______, as consumers repeatedly purchase more goods than they need and quickly discard them.",
-    a: ["stewardship", "self-reliance", "feasibility", "overconsumption"],
-    c: 3
-  },
-  {
-    q: "Unlike most organic waste, many _______ are highly persistent and may take decades or even centuries to decompose.",
-    a: ["virgin resources", "renewable energies", "synthetic materials", "legal requirements"],
+    q: "The invention of smartphones helped _______ the way people communicate, work, and access information.",
+    a: ["retreat", "diagnose", "revolutionize", "characterize"],
     c: 2
   },
   {
-    q: "Roads and urban development can _______ natural habitats, separating wildlife populations that once lived in a continuous ecosystem.",
-    a: ["fragment", "foster", "alleviate", "deploy"],
+    q: "The filmmaker used computer _______ to create characters and environments that would have been impossible to film in real life.",
+    a: ["animation", "resistance", "perseverance", "treatment"],
     c: 0
   },
   {
-    q: "Engineers are searching for a commercially _______ alternative that is both environmentally sustainable and affordable enough for widespread use.",
-    a: ["habitable", "viable", "rigorous", "unpredictable"],
+    q: "In her autobiography, she gives a detailed _______ of her experiences working as a doctor during the war.",
+    a: ["personal account", "battlefield injury", "military commander", "technological innovation"],
+    c: 0
+  },
+  {
+    q: "In the novel, the author _______ the main character as a brave but deeply conflicted young soldier.",
+    a: ["operates", "characterizes", "retreats", "diagnoses"],
     c: 1
   }
 ];
@@ -369,6 +384,22 @@ questions.forEach((q,i)=>{
   quizDiv.appendChild(div);
 });
 
+// 🔒 BẮT BUỘC NHẬP TÊN TRƯỚC KHI LÀM BÀI
+const usernameInput = document.getElementById("username");
+const nameHint = document.getElementById("nameHint");
+
+function setQuizAccess(){
+  const hasName = usernameInput.value.trim().length > 0;
+  document.querySelectorAll('#quiz input[type="radio"]').forEach(input=>{
+    input.disabled = !hasName || submitted || timeExpired;
+  });
+  quizDiv.classList.toggle("quiz-locked", !hasName && !submitted);
+  nameHint.style.display = hasName ? "none" : "block";
+}
+
+usernameInput.addEventListener("input", setQuizAccess);
+setQuizAccess();
+
 // ⏱ timer
 let time=1200;
 let timer=setInterval(()=>{
@@ -376,13 +407,27 @@ let timer=setInterval(()=>{
   let s=time%60;
   document.getElementById("timer").innerText=`⏳ ${m}:${s<10?"0"+s:s}`;
   time--;
-  if(time<0){clearInterval(timer);submitQuiz();}
+  if(time<0){
+    clearInterval(timer);
+    timeExpired = true;
+    submitQuiz(true);
+  }
 },1000);
 
 // submit
-function submitQuiz(){
+function submitQuiz(forceSubmit=false){
+  if(submitted) return;
+
   let name=document.getElementById("username").value.trim();
-  if(!name){alert("Nhập tên!");return;}
+  if(!name){
+    if(forceSubmit){
+      name = "CHƯA NHẬP TÊN";
+    }else{
+      alert("❌ Bạn phải nhập tên trước khi làm và nộp bài!");
+      usernameInput.focus();
+      return;
+    }
+  }
 let hasEmpty = false;
 
 // kiểm tra câu chưa làm
@@ -398,11 +443,24 @@ questions.forEach((q,i)=>{
   }
 });
 
-if(hasEmpty){
+if(hasEmpty && !forceSubmit){
   alert("❌ Bạn phải làm hết câu trước khi nộp!");
   return;
 }
   clearInterval(timer);
+  submitted = true;
+
+  // 🔒 Khóa toàn bộ bài sau khi nộp / hết giờ
+  document.querySelectorAll('#quiz input[type="radio"]').forEach(input=>input.disabled=true);
+  usernameInput.disabled = true;
+  quizDiv.classList.remove("quiz-locked");
+  const submitBtn = document.querySelector('button[onclick="submitQuiz()"]');
+  if(submitBtn){
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = "0.55";
+    submitBtn.style.cursor = "not-allowed";
+    submitBtn.innerText = timeExpired ? "⏰ Đã hết giờ - Bài đã tự nộp" : "✅ Đã nộp bài";
+  }
 
   let score=0;
   let wrongList=[];
@@ -433,7 +491,8 @@ if(hasEmpty){
 let resultHTML = `
 🎉 <b>${name}</b> đúng <b>${score}/${questions.length}</b><br>
 ⏰ ${now}<br>
-⚠️ TabSwitch: ${tabSwitchCount || 0}<br><br>
+⚠️ TabSwitch: ${tabSwitchCount || 0}<br>
+${timeExpired ? "⏰ <b>Hết thời gian: hệ thống đã tự động nộp và khóa bài.</b><br>" : ""}<br>
 `;
 
 if(wrongRate < 0.3){

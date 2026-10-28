@@ -103,7 +103,7 @@ button{
 
 <div class="container">
 
-<h1>✨ KHẢO BÀI TỪ VỰNG UNIT 1 ✨</h1>
+<h1>✨ KHẢO BÀI TỪ VỰNG  ✨</h1>
 
 <div class="header">
 <input id="username" placeholder="Nhập tên của bạn...">
@@ -147,205 +147,180 @@ function shuffle(arr){
 
 // 📚 DATA
 let originalQuestions = [
-  {
-    q: "Although the enemy army was much larger, the local people continued to _______ their attacks for several months.",
-    a: ["retreat", "resist", "diagnose", "inspire"],
-    c: 1
-  },
-  {
-    q: "Thousands of ordinary people joined the _______ movement to fight against the occupying forces.",
-    a: ["resistance", "presentation", "innovation", "recreation"],
+   {
+    q: "Marie Curie ______ extensive research on radioactivity, which earned her international recognition.",
+    a: ["carried out", "turned down", "gave up", "put off"],
     c: 0
   },
   {
-    q: "After several hours of fighting, the soldiers finally managed to _______ the enemy and take control of the area.",
-    a: ["dedicate", "operate", "defeat", "characterize"],
+    q: "After several months of fighting, the national army finally ______ the invading forces and regained control of the city.",
+    a: ["admired", "defeated", "protected", "surrendered"],
+    c: 1
+  },
+  {
+    q: "The hospital has introduced ______ medical equipment that allows doctors to perform complex operations with greater precision.",
+    a: ["ancient", "ordinary", "cutting-edge", "outdated"],
     c: 2
   },
   {
-    q: "The two armies fought a fierce _______ that lasted from early morning until sunset.",
-    a: ["mission", "battle", "treatment", "legacy"],
+    q: "The young scientist was widely regarded as a ______ because she solved difficult mathematical problems at the age of eight.",
+    a: ["surgeon", "genius", "soldier", "character"],
     c: 1
   },
   {
-    q: "Many wounded soldiers were carried away from the _______ and taken to a nearby field hospital.",
-    a: ["battlefield", "documentary", "surgery", "biography"],
-    c: 0
-  },
-  {
-    q: "The resistance fighters often hid deep in the _______, where enemy forces found it difficult to locate them.",
-    a: ["operation", "jungle", "presentation", "character"],
-    c: 1
-  },
-  {
-    q: "The _______ ordered his troops to move to a safer position after receiving reports of an approaching enemy force.",
-    a: ["entrepreneur", "surgeon", "commander", "poet"],
+    q: "The rescue team continued its ______ against the enemy despite severe shortages of food and medical supplies.",
+    a: ["ambition", "devotion", "resistance", "confusion"],
     c: 2
   },
   {
-    q: "After years of military service and several major battles, he is now respected as a war _______.",
-    a: ["veteran", "founder", "genius", "character"],
+    q: "During the war, many wounded soldiers received emergency treatment at temporary ______ built near the battlefield.",
+    a: ["field hospitals", "pizza chains", "cultural centres", "research laboratories"],
     c: 0
   },
   {
-    q: "The young _______ was seriously wounded while protecting his unit during the battle.",
-    a: ["soldier", "entrepreneur", "surgeon", "poet"],
-    c: 0
+    q: "The experienced ______ performed an emergency operation to save the soldier who had been seriously injured.",
+    a: ["poet", "surgeon", "historian", "journalist"],
+    c: 1
   },
   {
-    q: "When it became impossible to defend the position, the commander had no choice but to order a _______.",
-    a: ["victory", "mission", "retreat", "resistance"],
+    q: "Although he was offered a well-paid job abroad, the doctor remained ______ to serving people in his hometown.",
+    a: ["unfamiliar", "offensive", "committed", "contaminated"],
     c: 2
   },
   {
-    q: "Because of his important contribution to the country's independence, he later became known as a national _______.",
-    a: ["hero", "enemy", "founder", "surgeon"],
+    q: "The author gave a detailed personal ______ of her experiences during the resistance war in her autobiography.",
+    a: ["account", "figure", "custom", "feature"],
     c: 0
   },
   {
-    q: "The soldiers were remembered for their _______ actions in protecting civilians despite the danger to their own lives.",
-    a: ["viral", "heroic", "biological", "poetic"],
+    q: "The historical film became a ______, earning millions of dollars and attracting huge audiences worldwide.",
+    a: ["documentary", "blockbuster", "phonograph", "short film"],
     c: 1
   },
   {
-    q: "The commander successfully led his army to _______ after several months of difficult fighting.",
-    a: ["injury", "victory", "retreat", "disease"],
-    c: 1
-  },
-  {
-    q: "The rescue team was sent on a dangerous _______ to bring the wounded soldiers back from enemy territory.",
-    a: ["achievement", "vision", "mission", "recreation"],
+    q: "Despite facing numerous difficulties, she remained ______ to achieve her dream of becoming a successful scientist.",
+    a: ["unenthusiastic", "unfamiliar", "ambitious", "insulting"],
     c: 2
   },
   {
-    q: "Her lifelong _______ to helping injured soldiers made her widely respected by both doctors and patients.",
-    a: ["devotion", "resistance", "operation", "animation"],
-    c: 0
+    q: "After studying engineering for two years, he decided to ______ university and start his own technology company.",
+    a: ["carry out", "pass away", "bond over", "drop out of"],
+    c: 3
   },
   {
-    q: "Even under extremely difficult conditions, she remained _______ to providing medical care for everyone who needed it.",
-    a: ["dedicated", "viral", "wounded", "computer-animated"],
-    c: 0
-  },
-  {
-    q: "He decided to _______ his entire life to scientific research and the improvement of public health.",
-    a: ["diagnose", "dedicate", "retreat", "characterize"],
+    q: "Students from different countries may experience ______ when they first encounter unfamiliar customs and social rules.",
+    a: ["cultural diversity", "culture shock", "cultural exchange", "social justice"],
     c: 1
   },
   {
-    q: "Her strong _______ to achieve her goal helped her overcome many difficulties and complete the project successfully.",
-    a: ["determination", "battlefield", "defeat", "treatment"],
+    q: "International exchange programmes encourage students to respect ______ by introducing them to different languages, religions and traditions.",
+    a: ["cultural diversity", "language barriers", "plastic waste", "social divisions"],
     c: 0
   },
   {
-    q: "She was _______ to complete the mission successfully, even though the conditions were extremely challenging.",
-    a: ["determined", "poetic", "biological", "wounded"],
-    c: 0
-  },
-  {
-    q: "The community showed remarkable _______ by rebuilding homes and schools soon after the war ended.",
-    a: ["resilience", "surgery", "biography", "presentation"],
-    c: 0
-  },
-  {
-    q: "It took great courage and _______ for the team to continue the project after many unsuccessful attempts.",
-    a: ["perseverance", "animation", "injury", "battlefield"],
-    c: 0
-  },
-  {
-    q: "The firefighter showed extraordinary _______ when he entered the burning building to rescue two children.",
-    a: ["courage", "poetry", "disease", "treatment"],
-    c: 0
-  },
-  {
-    q: "People throughout the country admired the soldier's _______ in facing danger to protect others.",
-    a: ["bravery", "recreation", "operation", "presentation"],
-    c: 0
-  },
-  {
-    q: "His willingness to sacrifice his personal interests for his country reflected a deep sense of _______.",
-    a: ["patriotism", "innovation", "surgery", "animation"],
-    c: 0
-  },
-  {
-    q: "Her strong _______ to the humanitarian cause continued for more than thirty years.",
-    a: ["commitment", "defeat", "injury", "battlefield"],
-    c: 0
-  },
-  {
-    q: "The leader had a clear _______ of a country in which all children would have access to education.",
-    a: ["vision", "retreat", "enemy", "treatment"],
-    c: 0
-  },
-  {
-    q: "Steve Jobs is often described as a _______ entrepreneur because he imagined products and technologies before they became common.",
-    a: ["wounded", "visionary", "viral", "poetic"],
-    c: 1
-  },
-  {
-    q: "During the war, the doctor spent several years working in a _______ close to the battlefield.",
-    a: ["field hospital", "resistance movement", "live-action film", "personal account"],
-    c: 0
-  },
-  {
-    q: "The _______ performed several difficult operations on wounded soldiers during the night.",
-    a: ["founder", "fighter", "surgeon", "commander"],
+    q: "The international students found it difficult to communicate with local residents because of the ______.",
+    a: ["traditional costumes", "cultural features", "language barrier", "sense of identity"],
     c: 2
   },
   {
-    q: "Because the soldier had a serious abdominal injury, doctors had to perform emergency _______ immediately.",
-    a: ["surgery", "poetry", "animation", "resistance"],
-    c: 0
-  },
-  {
-    q: "The doctor had to _______ on the wounded soldier for nearly four hours to remove the bullet safely.",
-    a: ["innovate", "operate", "resist", "inspire"],
+    q: "It is important to ______ other cultures instead of judging their traditions according to our own standards.",
+    a: ["overlook", "appreciate", "insult", "disregard"],
     c: 1
   },
   {
-    q: "Nurses worked day and night to _______ the injured after the battle.",
-    a: ["transform", "characterize", "treat", "dedicate"],
+    q: "In some cultures, pointing directly at an older person may be considered ______ because it shows a lack of respect.",
+    a: ["respectful", "appropriate", "offensive", "ordinary"],
     c: 2
   },
   {
-    q: "The patient received medical _______ for several weeks before he was well enough to leave the hospital.",
-    a: ["treatment", "commitment", "achievement", "innovation"],
-    c: 0
-  },
-  {
-    q: "After several medical tests, he was _______ with pancreatic cancer.",
-    a: ["presented", "defeated", "diagnosed", "inspired"],
+    q: "The festival attracts international visitors because it ______ traditional music with modern dance performances.",
+    a: ["separates", "removes", "blends", "replaces"],
     c: 2
   },
   {
-    q: "The company developed a highly _______ method that reduced production time by almost half.",
-    a: ["innovative", "heroic", "wounded", "viral"],
-    c: 0
-  },
-  {
-    q: "The laboratory uses _______ technology that is more advanced than most systems currently available.",
-    a: ["national", "cutting-edge", "poetic", "wounded"],
+    q: "The local government's efforts to preserve traditional festivals help residents maintain a strong ______ of identity.",
+    a: ["feature", "sense", "element", "contrast"],
     c: 1
   },
   {
-    q: "The invention of smartphones helped _______ the way people communicate, work, and access information.",
-    a: ["retreat", "diagnose", "revolutionize", "characterize"],
+    q: "Vietnamese dishes such as pho and banh mi have ______ popularity in many countries around the world.",
+    a: ["made", "taken", "gained", "done"],
     c: 2
   },
   {
-    q: "The filmmaker used computer _______ to create characters and environments that would have been impossible to film in real life.",
-    a: ["animation", "resistance", "perseverance", "treatment"],
+    q: "The restaurant serves a wide variety of dishes, but its seafood noodles are the local ______ that most tourists come to try.",
+    a: ["respect", "element", "speciality", "confusion"],
+    c: 2
+  },
+  {
+    q: "The spicy soup does not suit my ______ because I prefer mild dishes without chilli.",
+    a: ["taste", "identity", "respect", "characteristic"],
     c: 0
   },
   {
-    q: "In her autobiography, she gives a detailed _______ of her experiences working as a doctor during the war.",
-    a: ["personal account", "battlefield injury", "military commander", "technological innovation"],
-    c: 0
-  },
-  {
-    q: "In the novel, the author _______ the main character as a brave but deeply conflicted young soldier.",
-    a: ["operates", "characterizes", "retreats", "diagnoses"],
+    q: "The chef opened a successful restaurant ______, with more than fifty branches operating throughout the country.",
+    a: ["booth", "chain", "layer", "pile"],
     c: 1
+  },
+  {
+    q: "The beauty of the traditional dance performance ______ the audience, who watched silently until the final movement.",
+    a: ["contaminated", "captivated", "decomposed", "defeated"],
+    c: 1
+  },
+  {
+    q: "If we want to reduce household waste, we should ______ single-use plastic bags and replace them with reusable shopping bags.",
+    a: ["make use of", "carry out", "get rid of", "bond over"],
+    c: 2
+  },
+  {
+    q: "Plastic bottles can remain in the environment for hundreds of years because they do not ______ easily.",
+    a: ["decompose", "recycle", "produce", "contain"],
+    c: 0
+  },
+  {
+    q: "Before putting an empty milk carton into the recycling bin, you should ______ it with clean water to remove any remaining milk.",
+    a: ["throw away", "rinse out", "rush out", "work out"],
+    c: 1
+  },
+  {
+    q: "After the family dinner, we placed the ______ in the refrigerator so that we could eat them the following day.",
+    a: ["peels", "layers", "leftovers", "fertilizers"],
+    c: 2
+  },
+  {
+    q: "Farmers who use excessive amounts of ______ may cause serious damage to soil and nearby water sources.",
+    a: ["compost piles", "reusable containers", "chemical fertilizers", "vegetable peels"],
+    c: 2
+  },
+  {
+    q: "The river became seriously ______ after a nearby factory released untreated industrial wastewater into it.",
+    a: ["purified", "protected", "contaminated", "recycled"],
+    c: 2
+  },
+  {
+    q: "To reduce food waste, the restaurant allows customers to order smaller portions or take their meals home in ______ containers.",
+    a: ["takeaway", "medical", "electrical", "historical"],
+    c: 0
+  },
+  {
+    q: "Students are encouraged to ______ old newspapers for art projects instead of throwing them into the rubbish bin.",
+    a: ["get rid of", "make use of", "drop out of", "pass away"],
+    c: 1
+  },
+  {
+    q: "The environmental club organises clean-up activities ______, usually on the first Saturday of every month.",
+    a: ["rarely", "accidentally", "regularly", "immediately"],
+    c: 2
+  },
+  {
+    q: "Residents are asked to separate recyclable materials from food waste ______ so that the local recycling system can operate effectively.",
+    a: ["carelessly", "properly", "rarely", "suddenly"],
+    c: 1
+  },
+  {
+    q: "The school has launched a campaign to encourage students to ______ plastic bottles instead of throwing them away after a single use.",
+    a: ["contaminate", "decompose", "reuse", "defeat"],
+    c: 2
   }
 ];
 
